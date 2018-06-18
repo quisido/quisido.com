@@ -1,0 +1,25 @@
+{
+  "name": "quisido",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^1.2.1",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "build": "react-scripts build",
+    "docker-build": "docker build --file Dockerfile --tag charlesstover/quisido .",
+    "docker": "npm run docker-rm && npm run docker-rmi && npm run docker-build && npm run docker-run-publish",
+    "docker-rm": "docker stop quisido && docker rm quisido",
+    "docker-rmi": "docker rmi charlesstover/quisido",
+    "docker-run": "docker run --detach --name quisido charlesstover/quisido",
+    "docker-run-publish": "docker run --detach --name quisido --publish 82:80 charlesstover/quisido",
+    "eject": "react-scripts eject",
+    "start": "react-scripts start",
+    "test": "react-scripts test --env=jsdom"
+  }
+}
