@@ -18,30 +18,27 @@ class App extends React.PureComponent {
       props.match.isExact ?
         props.match.url.replace(/^\//, '') || 'about' :
         null;
-    return [
-      <Header
-        key={0}
-        page={page}
-      />,
-      <Body
-        key={1}
-        page={page}
-      />,
-      <Footer key={2} />
-    ];
+    return (
+      <React.Fragment>
+        <Header page={page} />
+        <Body page={page} />
+        <Footer />
+      </React.Fragment>
+    );
   }
 
   render() {
-    return [
-      <CssBaseline key={0} />,
-      <Route
-        children={this.children}
-        key={1}
-        path="(/|/contact|/portfolio)?"
-        sensitive
-        strict
-      />
-    ];
+    return (
+      <React.Fragment>
+        <CssBaseline />
+        <Route
+          children={this.children}
+          path="(/|/contact|/portfolio)?"
+          sensitive
+          strict
+        />
+      </React.Fragment>
+    );
   }
 }
 
