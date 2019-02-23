@@ -8,6 +8,7 @@ import Footer from './footer/app-footer';
 import Header from './header/app-header';
 
 class App extends React.PureComponent {
+
   constructor(props) {
     super(props);
     this.children = this.children.bind(this);
