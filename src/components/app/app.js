@@ -1,46 +1,45 @@
-import CssBaseline from '@material-ui/core/CssBaseline';
-import withStyles from '@material-ui/core/styles/withStyles';
 import React from 'react';
-import Route from 'react-router-dom/Route';
-import appStyles from './app-styles';
-import Body from './body/app-body';
-import Footer from './footer/app-footer';
-import Header from './header/app-header';
+import ReactPortfolio from 'react-portfolio';
+import AboutMe from '../routes/about-me/about-me';
+import withStyles from './app-styles';
+
+const footer = [{
+  children: 'Ace Quisido',
+  href: 'https://quisido.com/',
+  title: 'Quisido.com',
+}];
+
+const routes = [
+  {
+    component: AboutMe,
+    description: 'Portfolio of freelance artist Ace Quisido.',
+    keywords: [ 'Ace Quisido', 'Ace Quisido\'s portfolio', 'freelance artist', 'freelance designer', 'freelance woodworker' ],
+    path: '/',
+    title: 'Ace Quisido'
+  }
+];
+
+const social = {
+  email: 'ace@quisido.com',
+  linkedin: 'acequisido',
+  // medium: 'Ace Quisido',
+  // skype: 'ace-quisido',
+  twitter: 'AceQuisido',
+};
 
 class App extends React.PureComponent {
-
-  constructor(props) {
-    super(props);
-    this.children = this.children.bind(this);
-  }
-
-  children(props) {
-    const page =
-      props.match.isExact ?
-        props.match.url.replace(/^\//, '') || 'about' :
-        null;
-    return (
-      <React.Fragment>
-        <Header page={page} />
-        <Body page={page} />
-        <Footer />
-      </React.Fragment>
-    );
-  }
-
   render() {
     return (
-      <React.Fragment>
-        <CssBaseline />
-        <Route
-          children={this.children}
-          path="(/|/contact|/portfolio)?"
-          sensitive
-          strict
-        />
-      </React.Fragment>
+      <ReactPortfolio
+        copyright={2018}
+        footer={footer}
+        hue={0}
+        routes={routes}
+        social={social}
+        title="Ace Quisido"
+      />
     );
   }
 }
 
-export default withStyles(appStyles)(App);
+export default withStyles(App);
