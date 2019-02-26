@@ -67,12 +67,14 @@ export default withStyles({
     maxWidth: 64,
     minHeight: 64,
     minWidth: 64,
+    transform: 'scale(1)',
     transitionDuration: '0.5s',
-    transitionProperty: 'filter',
+    transitionProperty: 'filter transform',
     transitionTimingFunction: 'ease-out',
     width: 64,
     '&:hover': {
       filter: 'saturate(100%)',
+      transform: 'scale(1.5)',
     },
     '&:not(:first-child)': {
       marginLeft: '2.5em',
