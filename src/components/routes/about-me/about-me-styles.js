@@ -4,7 +4,20 @@ import proficiencies from '../../../assets/proficiencies.png';
 const DESKTOP_MEDIA_QUERY =  '@media (min-width: 66rem)';
 const MOBILE_MEDIA_QUERY = '@media (max-width: 66rem)';
 
+const ICON_SIZE = 64;
+
 export default withStyles({
+  '@keyframes proficiency': {
+    '0%': {
+      filter: 'hue-rotate(0deg) saturate(100%)',
+    },
+    '50%': {
+      filter: 'hue-rotate(0deg) saturate(100%)',
+    },
+    '100%': {
+      filter: 'hue-rotate(360deg) saturate(100%)',
+    },
+  },
   aboutMe: {
     alignItems: 'center',
     display: 'flex',
@@ -50,37 +63,32 @@ export default withStyles({
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
-    justifyContent: 'center',
-    paddingBottom: 0,
-    paddingTop: 0,
+    justifyContent: 'space-around',
+    padding: `3em ${ICON_SIZE}px !important`,
   },
   proficiency: {
     backgroundImage: `url("${proficiencies}")`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'auto 100%',
     display: 'inline-block',
-    filter: 'saturate(0%)',
-    height: 64,
-    marginBottom: '2.5em',
-    marginTop: '2.5em',
-    maxHeight: 64,
-    maxWidth: 64,
-    minHeight: 64,
-    minWidth: 64,
-    transform: 'scale(1)',
+    filter: 'hue-rotate(0deg) saturate(0%)',
+    height: ICON_SIZE,
+    margin: ICON_SIZE / 4,
+    maxHeight: ICON_SIZE,
+    maxWidth: ICON_SIZE,
+    minHeight: ICON_SIZE,
+    minWidth: ICON_SIZE,
     transitionDuration: '0.5s',
-    transitionProperty: 'filter transform',
+    transitionProperty: 'filter',
     transitionTimingFunction: 'ease-out',
-    width: 64,
+    width: ICON_SIZE,
     '&:hover': {
+      animationDelay: '0s',
+      animationDuration: '10s',
+      animationIterationCount: 'infinite',
+      animationName: 'proficiency',
+      animationTimingFunction: 'linear',
       filter: 'saturate(100%)',
-      transform: 'scale(1.5)',
-    },
-    '&:not(:first-child)': {
-      marginLeft: '2.5em',
-    },
-    '&:not(:last-child)': {
-      marginRight: '2.5em',
     },
     '& > span': {
       visibility: 'hidden',
