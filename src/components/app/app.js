@@ -6,7 +6,7 @@ import withStyles from './app-styles';
 const footer = [{
   children: 'Ace Quisido',
   href: 'https://quisido.com/',
-  title: 'Quisido.com',
+  title: 'Ace Quisido\'s Portfolio',
 }];
 
 const routes = [
