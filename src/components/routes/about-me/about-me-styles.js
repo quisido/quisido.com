@@ -9,13 +9,13 @@ const ICON_SIZE = 64;
 export default withStyles({
   '@keyframes proficiency': {
     '0%': {
-      filter: 'hue-rotate(0deg) saturate(100%)',
+      filter: 'hue-rotate(10deg) saturate(100%)',
     },
     '50%': {
-      filter: 'hue-rotate(0deg) saturate(100%)',
+      filter: 'hue-rotate(10deg) saturate(100%)',
     },
     '100%': {
-      filter: 'hue-rotate(360deg) saturate(100%)',
+      filter: 'hue-rotate(370deg) saturate(100%)',
     },
   },
   aboutMe: {
@@ -71,7 +71,7 @@ export default withStyles({
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'auto 100%',
     display: 'inline-block',
-    filter: 'hue-rotate(0deg) saturate(0%)',
+    filter: 'hue-rotate(10deg) saturate(0%)',
     height: ICON_SIZE,
     margin: ICON_SIZE / 4,
     maxHeight: ICON_SIZE,

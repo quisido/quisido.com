@@ -33,7 +33,7 @@ class App extends React.PureComponent {
       <ReactPortfolio
         copyright={2018}
         footer={footer}
-        hue={0}
+        hue={10 / 360}
         routes={routes}
         social={social}
         title="Ace Quisido"

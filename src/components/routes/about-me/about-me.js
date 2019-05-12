@@ -1,6 +1,7 @@
 import { Paper, Tooltip, Typography } from '@material-ui/core';
 import React from 'react';
 import quotes from '../../../assets/quotes';
+import Resume from '../../resume';
 import withStyles from './about-me-styles';
 import Quotes from './quotes/quotes';
 
@@ -41,6 +42,7 @@ class AboutMe extends React.PureComponent {
             My expertise is in portraiture, and I have a strong background in sales and interior design.
           </Typography>
         </Paper>
+        <Resume />
         <section className={`${this.props.classes.section} ${this.props.classes.proficiencies}`}>
           {proficiencies.map((proficiency, index) =>
             <Tooltip
