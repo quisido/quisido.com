@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg
+  style="fill: #000000; stroke: #000000;"
+  version="1.1"
+  viewBox="0 0 125 75"
+  x="0px"
+  xml:space="preserve"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  y="0px"
+>
+  <title>Ace Quisido</title>
+  <desc>Official logo of artist and designer Ace Quisido</desc>
+  <polygon
+    fill="inherit"
+    points="0,75 62.5,0 62.5,3 2.5,75"
+    stroke-width="0"
+  />
+  <polygon
+    fill="inherit"
+    points="62.5,0 73.25,13.5 68.25,16.5 60,6"
+    stroke-width="0"
+  />
+  <circle
+    cx="91.25"
+    cy="40.75"
+    fill="none"
+    r="33"
+    stroke="inherit"
+    stroke-width="2.5"
+  />
+  <path
+    d="M 98.75,52.5 s 2.625,-1 4.375,-3.75 L 125,75 l -7.5,0 z"
+    fill="inherit"
+    stroke-width="0"
+  />
+</svg>
