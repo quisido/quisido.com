@@ -13,37 +13,39 @@ const proficiencies = [
   'Rhinoceros 5'
 ];
 
-class AboutMe extends React.PureComponent {
-  render() {
+export default withStyles(
+  function AboutMe({ classes }) {
     return (
       <React.Fragment>
-        <Paper className={this.props.classes.paper + ' ' + this.props.classes.aboutMe}>
-          <img
-            alt="Avatar"
-            className={this.props.classes.aboutMeAvatar}
-            height={100}
-            src="https://en.gravatar.com/userimage/153264571/57b76baf3788235b870f35e5fefece71.jpg?size=100"
-            width={100}
-          />
-          <Typography
-            className={this.props.classes.aboutMeParagraph}
-            variant="subtitle1"
-          >
-            My name is <span
-              children="Ace Quisido"
-              className={this.props.classes.aboutMeHighlight}
-            />,{' '}
-            and I'm a{' '}
-            <span
-              children="freelance artist"
-              className={this.props.classes.aboutMeHighlight}
-            />{' '}
-            with a focus in painting and woodworking.
-            My expertise is in portraiture, and I have a strong background in sales and interior design.
-          </Typography>
+        <Paper className={classes.paper}>
+          <div className={classes.aboutMe}>
+            <img
+              alt="Avatar"
+              className={classes.aboutMeAvatar}
+              height={100}
+              src="https://en.gravatar.com/userimage/153264571/57b76baf3788235b870f35e5fefece71.jpg?size=100"
+              width={100}
+            />
+            <Typography
+              className={classes.aboutMeParagraph}
+              variant="subtitle1"
+            >
+              My name is <span
+                children="Ace Quisido"
+                className={classes.aboutMeHighlight}
+              />,{' '}
+              and I'm a{' '}
+              <span
+                children="freelance artist"
+                className={classes.aboutMeHighlight}
+              />{' '}
+              with a focus in painting and woodworking.
+              My expertise is in portraiture, and I have a strong background in sales and interior design.
+            </Typography>
+          </div>
+          <Resume />
         </Paper>
-        <Resume />
-        <section className={`${this.props.classes.section} ${this.props.classes.proficiencies}`}>
+        <section className={`${classes.section} ${classes.proficiencies}`}>
           {proficiencies.map((proficiency, index) =>
             <Tooltip
               key={proficiency}
@@ -51,7 +53,7 @@ class AboutMe extends React.PureComponent {
               title={proficiency}
             >
               <span
-                className={this.props.classes.proficiency}
+                className={classes.proficiency}
                 style={{
                   backgroundPosition: (-64 * index) + 'px center'
                 }}
@@ -61,12 +63,20 @@ class AboutMe extends React.PureComponent {
             </Tooltip>
           )}
         </section>
-        <Paper className={this.props.classes.paper}>
+        {/*
+        <Paper className={classes.paper}>
+          <Typography
+            className={classes.h2}
+            variant="h2"
+          >
+            Featured Projects:
+          </Typography>
+        </Paper>
+        */}
+        <Paper className={classes.paper}>
           <Quotes quotes={quotes} />
         </Paper>
       </React.Fragment>
     );
   }
-}
-
-export default withStyles(AboutMe);
+);

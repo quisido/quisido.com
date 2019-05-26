@@ -12,9 +12,12 @@ export default withStyles(
           href={`/resume/${VERSION}/ace-quisido-resume.pdf`}
           rel="nofollow noopener noreferrer"
           target="_blank"
-          title="Download Résumé as a PDF"
         >
-          <Button variant="contained" color="primary">
+          <Button
+            className={classes.button}
+            color="primary"
+            variant="contained"
+          >
             Download Resume (PDF)
           </Button>
         </a>

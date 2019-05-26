@@ -24,11 +24,11 @@ export default withStyles({
     flexGrow: 1,
     justifyContent: 'flex-start',
     [DESKTOP_MEDIA_QUERY]: {
-      flexDirection: 'row'
+      flexDirection: 'row',
     },
     [MOBILE_MEDIA_QUERY]: {
-      flexDirection: 'column'
-    }
+      flexDirection: 'column',
+    },
   },
   aboutMeAvatar: {
     borderRadius: 50,
@@ -38,14 +38,14 @@ export default withStyles({
       '0 3px 1px -2px rgba(0, 0, 0, 0.12)',
     margin: '1em',
     [DESKTOP_MEDIA_QUERY]: {
-      marginRight: 0
+      marginRight: 0,
     },
     [MOBILE_MEDIA_QUERY]: {
-      marginBottom: 0
-    }
+      marginBottom: 0,
+    },
   },
   aboutMeHighlight: {
-    color: '#FFFFFF'
+    color: '#FFFFFF',
   },
   aboutMeParagraph: {
     flexBasis: 0,
@@ -53,10 +53,16 @@ export default withStyles({
     fontSize: 16,
     lineHeight: '2em',
     textIndent: '1em',
-    padding: '1em'
+    padding: '1em',
+  },
+  h2: {
+    fontSize: '1.5em',
+    paddingTop: '1em',
+    textAlign: 'center',
   },
   paper: {
-    margin: '2em 1em'
+    backgroundColor: '#302C2E',
+    margin: '2em 1em',
   },
   proficiencies: {
     alignItems: 'center',
@@ -92,13 +98,13 @@ export default withStyles({
     },
     '& > span': {
       visibility: 'hidden',
-    }
+    },
   },
   section: {
     padding: '3em 1em',
     textAlign: 'center',
     '& + $section': {
-      paddingTop: '2em'
-    }
-  }
+      paddingTop: '2em',
+    },
+  },
 });

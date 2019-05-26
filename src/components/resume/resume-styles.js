@@ -1,8 +1,13 @@
 import { withStyles } from '@material-ui/core';
 
-export default withStyles({
+export default withStyles(theme => ({
   root: {
-    margin: '4em 0',
+    padding: '0 0 2em 0',
     textAlign: 'center',
   },
-});
+  button: {
+    '&:hover': {
+      backgroundColor: theme.palette.secondary.main,
+    },
+  },
+}));
