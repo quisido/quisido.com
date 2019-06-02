@@ -1,13 +1,13 @@
 {
   "name": "quisido",
   "version": "0.1.0",
+  "private": true,
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
   ],
-  "private": true,
   "scripts": {
     "build": "react-scripts build",
     "docker-build": "docker build --file Dockerfile --tag charlesstover/quisido .",

@@ -7204,10 +7204,10 @@ react-multi-context@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/react-multi-context/-/react-multi-context-1.1.1.tgz#7b9e288b7be5bd36ce20449f78ada738c0275d98"
 
-react-portfolio@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/react-portfolio/-/react-portfolio-1.3.0.tgz#ca6d03201d059e0b20ef327a89f205939c90ead9"
-  integrity sha512-FK5FXnseyDSlK5EwYAtcDbnhtTxvLmmRkXnAxp7P4MOGDIK3pOx3uDloqZGnwSzrVzxnOlmyrQ6i0nwpWRw2Rg==
+react-portfolio@~1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/react-portfolio/-/react-portfolio-1.4.0.tgz#6ce6c9b4a5314a36922cbc1dc61760b6be53cf36"
+  integrity sha512-0EjxhlwktdPByxPB+DWPpLuG1mj6KIR4zNsDS/RTHg8bT2jhZ9UR1N8d0kZ2NOnxj7bLkhtpWnvUozvyEeiMLw==
   dependencies:
     "@charlesstover/hsl2rgb" "^1.0.4"
     deepmerge "^3.2.0"
