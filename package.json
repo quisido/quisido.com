@@ -10,12 +10,6 @@
   ],
   "scripts": {
     "build": "react-scripts build",
-    "docker-build": "docker build --file Dockerfile --tag charlesstover/quisido .",
-    "docker": "npm run docker-rm && npm run docker-rmi && npm run docker-build && npm run docker-run-publish",
-    "docker-rm": "docker stop quisido && docker rm quisido",
-    "docker-rmi": "docker rmi charlesstover/quisido",
-    "docker-run": "docker run --detach --name quisido charlesstover/quisido",
-    "docker-run-publish": "docker run --detach --name quisido --publish 82:80 charlesstover/quisido",
     "eject": "react-scripts eject",
     "start": "react-scripts start",
     "test": "react-scripts test --env=jsdom"
@@ -25,7 +19,7 @@
     "@material-ui/core": "^4.0.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
-    "react-portfolio": "~1.4.3",
+    "react-portfolio": "~1.4.4",
     "react-router": "^4.4.0-beta.6",
     "react-router-dom": "^4.4.0-beta.6",
     "react-scripts": "^2.1.5"
