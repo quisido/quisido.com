@@ -1,9 +1,9 @@
 import { Paper, Tooltip, Typography } from '@material-ui/core';
 import React from 'react';
 import quotes from '../../../assets/quotes';
-import Resume from '../../resume';
 import withStyles from './about-me-styles';
-import Quotes from './quotes/quotes';
+// import Featured from './featured';
+import Quotes from './quotes';
 
 const proficiencies = [
   'Adobe Illustrator CC',
@@ -28,7 +28,7 @@ export default withStyles(
             />
             <Typography
               className={classes.aboutMeParagraph}
-              variant="subtitle1"
+              variant="body1"
             >
               My name is <span
                 children="Ace Quisido"
@@ -43,7 +43,6 @@ export default withStyles(
               My expertise is in portraiture, and I have a strong background in sales and interior design.
             </Typography>
           </div>
-          <Resume />
         </Paper>
         <section className={`${classes.section} ${classes.proficiencies}`}>
           {proficiencies.map((proficiency, index) =>
@@ -65,12 +64,7 @@ export default withStyles(
         </section>
         {/*
         <Paper className={classes.paper}>
-          <Typography
-            className={classes.h2}
-            variant="h2"
-          >
-            Featured Projects:
-          </Typography>
+          <Featured />
         </Paper>
         */}
         <Paper className={classes.paper}>

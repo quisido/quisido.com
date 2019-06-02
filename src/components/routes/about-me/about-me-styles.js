@@ -1,23 +1,13 @@
 import { withStyles } from '@material-ui/core';
 import proficiencies from '../../../assets/proficiencies.png';
+import { PRIMARY } from '../../../utils/context';
 
 const DESKTOP_MEDIA_QUERY =  '@media (min-width: 66rem)';
-const MOBILE_MEDIA_QUERY = '@media (max-width: 66rem)';
-
 const ICON_SIZE = 64;
+const MOBILE_MEDIA_QUERY = '@media (max-width: 66rem)';
+const PRIMARY_DEG = `${PRIMARY * 360}deg`;
 
 export default withStyles({
-  '@keyframes proficiency': {
-    '0%': {
-      filter: 'hue-rotate(10deg) saturate(100%)',
-    },
-    '50%': {
-      filter: 'hue-rotate(10deg) saturate(100%)',
-    },
-    '100%': {
-      filter: 'hue-rotate(370deg) saturate(100%)',
-    },
-  },
   aboutMe: {
     alignItems: 'center',
     display: 'flex',
@@ -61,7 +51,6 @@ export default withStyles({
     textAlign: 'center',
   },
   paper: {
-    backgroundColor: '#302C2E',
     margin: '2em 1em',
   },
   proficiencies: {
@@ -77,7 +66,7 @@ export default withStyles({
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'auto 100%',
     display: 'inline-block',
-    filter: 'hue-rotate(10deg) saturate(0%)',
+    filter: `hue-rotate(${PRIMARY_DEG}) saturate(0%)`,
     height: ICON_SIZE,
     margin: ICON_SIZE / 4,
     maxHeight: ICON_SIZE,
@@ -89,12 +78,7 @@ export default withStyles({
     transitionTimingFunction: 'ease-out',
     width: ICON_SIZE,
     '&:hover': {
-      animationDelay: '0s',
-      animationDuration: '10s',
-      animationIterationCount: 'infinite',
-      animationName: 'proficiency',
-      animationTimingFunction: 'linear',
-      filter: 'saturate(100%)',
+      filter: `hue-rotate(${PRIMARY_DEG}) saturate(100%)`,
     },
     '& > span': {
       visibility: 'hidden',

@@ -1,6 +1,6 @@
 import { Button } from '@material-ui/core';
 import React from 'react';
-import Quote from './quote/quote';
+import Quote from './quote';
 import withStyles from './quotes-styles';
 
 class Quotes extends React.PureComponent {
