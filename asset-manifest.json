@@ -1,15 +1,19 @@
 {
   "files": {
-    "main.js": "/static/js/main.bd47ca37.chunk.js",
-    "main.js.map": "/static/js/main.bd47ca37.chunk.js.map",
+    "main.js": "/static/js/main.99de8188.chunk.js",
+    "main.js.map": "/static/js/main.99de8188.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.c5541365.js",
     "runtime~main.js.map": "/static/js/runtime~main.c5541365.js.map",
-    "static/js/2.407c246c.chunk.js": "/static/js/2.407c246c.chunk.js",
-    "static/js/2.407c246c.chunk.js.map": "/static/js/2.407c246c.chunk.js.map",
+    "static/js/2.880d60ea.chunk.js": "/static/js/2.880d60ea.chunk.js",
+    "static/js/2.880d60ea.chunk.js.map": "/static/js/2.880d60ea.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.8d579690fbddb2e80b7473860bb3def6.js": "/precache-manifest.8d579690fbddb2e80b7473860bb3def6.js",
+    "precache-manifest.3b5262902db7b0c7cddc0c263be549f2.js": "/precache-manifest.3b5262902db7b0c7cddc0c263be549f2.js",
     "service-worker.js": "/service-worker.js",
+    "static/media/acealters.jpg": "/static/media/acealters.b46bb94c.jpg",
     "static/media/charles-stover.jpg": "/static/media/charles-stover.9a2a17dd.jpg",
+    "static/media/dry-media.jpg": "/static/media/dry-media.0991994a.jpg",
+    "static/media/fabrication.jpg": "/static/media/fabrication.a9d3c57e.jpg",
+    "static/media/miniatures.jpg": "/static/media/miniatures.9ad18643.jpg",
     "static/media/proficiencies.png": "/static/media/proficiencies.3f98449c.png"
   }
 }
