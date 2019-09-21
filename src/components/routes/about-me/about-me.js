@@ -2,7 +2,7 @@ import { Paper, Tooltip, Typography } from '@material-ui/core';
 import React from 'react';
 import quotes from '../../../assets/quotes';
 import withStyles from './about-me-styles';
-// import Featured from './featured';
+import Featured from './featured';
 import Quotes from './quotes';
 
 const proficiencies = [
@@ -62,11 +62,9 @@ export default withStyles(
             </Tooltip>
           )}
         </section>
-        {/*
         <Paper className={classes.paper}>
           <Featured />
         </Paper>
-        */}
         <Paper className={classes.paper}>
           <Quotes quotes={quotes} />
         </Paper>

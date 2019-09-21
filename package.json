@@ -1,5 +1,5 @@
 {
-  "name": "quisido",
+  "name": "quisido.com",
   "version": "0.1.0",
   "private": true,
   "browserslist": [
@@ -10,6 +10,7 @@
   ],
   "scripts": {
     "build": "react-scripts build",
+    "build-plus": "node scripts/build-plus/build-plus.js",
     "eject": "react-scripts eject",
     "start": "react-scripts start",
     "test": "react-scripts test --env=jsdom"
