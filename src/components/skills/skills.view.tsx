@@ -1,10 +1,10 @@
 import Box from '@awsui/components-react/box';
 import { ReactElement } from 'react';
-import adobeIllustrator from '../../images/adobe-illustrator.png';
-import adobePhotoshop from '../../images/adobe-photoshop.png';
-import autodeskAutocad from '../../images/autodesk-autocad.png';
-import autodeskRevit from '../../images/autodesk-revit.png';
-import rhinoceros from '../../images/rhinoceros.png';
+import adobeIllustrator from '../../images/adobe-illustrator.gif';
+import adobePhotoshop from '../../images/adobe-photoshop.gif';
+import autodeskAutocad from '../../images/autodesk-autocad.gif';
+import autodeskRevit from '../../images/autodesk-revit.gif';
+import rhinoceros from '../../images/rhinoceros.gif';
 import styles from './skills.module.scss';
 
 interface Icon {
