@@ -1,27 +1,72 @@
 {
   "name": "quisido.com",
   "version": "0.1.0",
+  "author": "Charles Stover <charlesstover@quisido.com>",
+  "description": "the professional portfolio of Ace Quisido",
+  "homepage": "https://quisido.com/",
   "private": true,
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
+  "repository": "github:CharlesStover/quisido.com",
+  "bugs": {
+    "email": "charlesstover@quisido.com.com",
+    "url": "https://github.com/CharlesStover/quisido.com/issues"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/sponsors/CharlesStover"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  },
   "scripts": {
     "build": "react-scripts build",
-    "build-plus": "node scripts/build-plus/build-plus.js",
-    "eject": "react-scripts eject",
+    "eslint": "eslint src",
+    "jest": "jest",
     "start": "react-scripts start",
-    "test": "react-scripts test --env=jsdom"
+    "test": "eslint src && jest"
   },
-  "dependencies": {
-    "@material-ui/core": "^4.2.0",
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3",
-    "react-portfolio": "~1.4.4",
-    "react-router": "^4.4.0-beta.6",
-    "react-router-dom": "^4.4.0-beta.8",
-    "react-scripts": "^3.0.1"
+  "devDependencies": {
+    "@awsui/components-react": "^3.0.164",
+    "@awsui/design-tokens": "^3.0.10",
+    "@awsui/global-styles": "^1.0.8",
+    "@awsui/test-utils-core": "^1.0.10",
+    "@babel/plugin-transform-runtime": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "@babel/runtime": "^7.14.0",
+    "@testing-library/jest-dom": "^5.13.0",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/react-hooks": "^7.0.0",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.12.1",
+    "@types/react": "^17.0.9",
+    "@types/react-dom": "^17.0.6",
+    "@types/react-router": "^5.1.14",
+    "@types/react-router-dom": "^5.1.7",
+    "@typescript-eslint/eslint-plugin": "^4.26.0",
+    "@typescript-eslint/parser": "^4.26.0",
+    "@yarnpkg/pnpify": "^3.0.0-rc.6",
+    "awsui-theme": "^1.0.5",
+    "babel-jest": "^27.0.2",
+    "eslint": "^7.28.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.0.4",
+    "lazy-i18n": "^2.0.9",
+    "prettier": "^2.3.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.3",
+    "react-test-renderer": "^17.0.2",
+    "sass": "^1.34.1",
+    "ts-jest": "^27.0.2",
+    "tslib": "^2.2.0",
+    "typescript": "^4.3.2",
+    "use-awsui": "^1.0.4",
+    "use-awsui-router": "latest",
+    "web-vitals": "^2.0.1"
   }
 }

@@ -1,0 +1,20 @@
+.root {
+  display: flex;
+  // filter: hue-rotate(10deg) saturate(0.5);
+  filter: hue-rotate(50deg) saturate(90%);
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  > img {
+    filter: grayscale(1) brightness(4);
+    margin: 0.5em;
+    transition-duration: 1s;
+    transition-property: filter;
+    transition-timing-function: ease-out;
+
+    &:hover {
+      filter: grayscale(0) brightness(1);
+    }
+  }
+}

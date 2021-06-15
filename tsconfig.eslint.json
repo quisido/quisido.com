@@ -1,0 +1,16 @@
+{
+  "exclude": [".git", ".vscode", ".yarn", "jest", "node_modules"],
+  "extends": "./tsconfig.json",
+  "include": [
+    ".eslintrc.json",
+    "**/*.cjs",
+    "**/*.d.ts",
+    "**/*.html",
+    "**/*.js",
+    "**/*.json",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.yml"
+  ]
+}
