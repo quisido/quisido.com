@@ -5,7 +5,7 @@ branches:
 cache:
   npm: false
   directories:
-    - .yarn/cache
+    - '.yarn/cache'
 deploy:
   fqdn: quisido.com
   keep-history: true
@@ -14,7 +14,7 @@ deploy:
   skip-cleanup: true
   target-branch: gh-pages
   github-token:
-    secure: pniqht7axSIufpwVELq2RaOXhemMrxr/Gh4nCiPNlKwuHvg/SFrG5CyL7AVOodNAwkrrsMLRCLLDmjz+OMXyZTL13INrnJ1GEkDaTkkyBvdjTwI5FpVD5DsYUG8ukcynMiukxYPYMjQyoOM4uf3xwoJqE+nM8CU6DbiWEPfSHSwfmdrRx6VPNac6HmEBIUa1N3RPyeiY6TECC8j6fblAj2Bn1Uvons9y4yvNQ0Vt31Q61Q5hp6e8xWrDIJvLwWUa0fE1tPGBpSVe4V1wqhOaE4UFsMI287kFP3kiZWnWcwnqs5oVWral8KysdDFZPEUGw/GgR4GODY9epcezE1iAsFNA+pNopMwL92JsYVoW86I1NigL0sUmV+CMktQKqfwSYEKuRMhhQLsCKbOn+ycB+p74ijdrQcAAQzQ2DLNG+yyOuNjqfk5XAb2FGefebRdop+4sLJpVDgP74PtWO16aDk0/DHsV91ed/AP5nD+ViaSh8sB9/csXvnG2gdNPoOP8+5Y4wDoWqNvBm83ScGWr191phBS+wn8JmqJ4sF6s+tY0TS5YS1U5wZ8qay+eKkH0PHYX33bZEMuTXd63xnSvq2Nvu2WWr7G5qwy1rzWNQIqvmPt0nZNtAzp5Qy5+KtYM2uZIFAodyjE9oxxc0UknhIpDrjADctTZ5ujs35tbUUI=
+    secure: m1udmAf6k/wLTCHNrZ+7SfN0n1tO4UBIk3YVpW9dI7NunyVhs1IcymxSDVnskrxf80zIGygfMOfFBticiDkLIN9VkFjK/ltcyhF58R5CzLpWRtL59mfbEXuABvVQ3gwgHHvHFXQHapl7QVh9piieyoMfYzXzzONTQrYM2MVmUuyr0pLKu9wAbA1kqubfSUo8TvLqCefEYiAXCHYgnQ6N3mJ6N8gSW1MwGKObp0GTnAbABaN8Tjx2Zw8GjbtBebhNbsgxTEir2ZiScPeUqhzhDnmcyF296FRNVLmtcS5RH10G7Rwgt4cIGwHkEDdmwEqHpegl24ZCEFy9bU1PSdPABuHWqwgL6sl0v7Ba6xUnvL1+jR3vFES4BSS8E8tbaVWqgw3qJk35EGBraQpjPXKwt/NH6mlosBbE3YYi8lIpkADGpD9rqmrrkgIkJKglqJRPOCoAe8vWA0+H1/nK9ojUdeZm47I8UkTyjZL1squchq5gqJ/iY+sCFAQv78RrtkwF9Uy2SJVnZMonP+yyLLj0uSBD66GULO5Xi9Sq/g4oOJxN+AHTle4HFwSK3IH3hWONuTTVSlmqvC3LDMzOCltpr4Wdz9+ikb2mm9tcjHfrobpuIDXcUckTr2SRVYTjTAUueiD5IVekjnqFZv7qdhUZ6WqZtxMtHTchJ+aw4oZLBFM=
   on:
     branch: master
 install:
