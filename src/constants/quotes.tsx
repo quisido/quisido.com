@@ -6,7 +6,9 @@ import Quote from '../types/quote';
 
 const QUOTES: Quote[] = [
   {
+    age: 25,
     author: 'Matt McClelland',
+    gender: 'male',
     image: mattMcclelland,
     quote: (
       <>
@@ -39,7 +41,9 @@ const QUOTES: Quote[] = [
   },
 
   {
+    age: 30,
     author: 'Charles Stover',
+    gender: 'male',
     image: charlesStover,
     quote: (
       <Box variant="p">

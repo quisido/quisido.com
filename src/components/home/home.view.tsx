@@ -32,9 +32,16 @@ export default function Home(): ReactElement {
               />
             </Box>
             <Box className={styles.p} variant="p">
-              My name is Ace Quisido, and I am a freelance artist with a focus
-              in painting and woodworking. My expertise is in portraiture, and I
-              have a strong background in sales and interior design.
+              My name is Ace{' '}
+              <span
+                data-ssml-phoneme-alphabet="ipa"
+                data-ssml-phoneme-ph="kɪsido"
+              >
+                Quisido [kɪsido]
+              </span>
+              , and I am a freelance artist with a focus in painting and
+              woodworking. My expertise is in portraiture, and I have a strong
+              background in sales and interior design.
             </Box>
           </SpaceBetween>
         </Container>

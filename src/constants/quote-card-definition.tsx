@@ -28,7 +28,7 @@ const QUOTE_CARD_DEFINITION: CardsProps<Quote>['cardDefinition'] = {
   sections: [
     {
       id: 'quote',
-      content({ author, image, quote }: Quote): ReactElement {
+      content({ age, author, gender, image, quote }: Quote): ReactElement {
         return (
           <>
             {image && (
@@ -43,7 +43,9 @@ const QUOTE_CARD_DEFINITION: CardsProps<Quote>['cardDefinition'] = {
                 />
               </Box>
             )}
-            {quote}
+            <span data-ssml-voice-age={age} data-ssml-voice-gender={gender}>
+              {quote}
+            </span>
           </>
         );
       },
