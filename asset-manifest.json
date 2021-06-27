@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.d3c7b592.chunk.css",
-    "main.js": "/static/js/main.a7f815ab.chunk.js",
-    "main.js.map": "/static/js/main.a7f815ab.chunk.js.map",
+    "main.js": "/static/js/main.0fee4431.chunk.js",
+    "main.js.map": "/static/js/main.0fee4431.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.4c92ea1c.js",
     "runtime-main.js.map": "/static/js/runtime-main.4c92ea1c.js.map",
     "static/css/2.38555674.chunk.css": "/static/css/2.38555674.chunk.css",
@@ -22,13 +22,13 @@
     "static/js/2.5faf7050.chunk.js.LICENSE.txt": "/static/js/2.5faf7050.chunk.js.LICENSE.txt",
     "static/media/charles-stover.831e9222.jpg": "/static/media/charles-stover.831e9222.jpg",
     "static/media/study-of-night-zag-wall--portions--240.02396603.jpg": "/static/media/study-of-night-zag-wall--portions--240.02396603.jpg",
-    "static/media/study-of-night-zag-wall--portions.060d1740.jpg": "/static/media/study-of-night-zag-wall--portions.060d1740.jpg"
+    "static/media/study-of-night-zag-wall--portions.f547d8de.jpg": "/static/media/study-of-night-zag-wall--portions.f547d8de.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.4c92ea1c.js",
     "static/css/2.38555674.chunk.css",
     "static/js/2.5faf7050.chunk.js",
     "static/css/main.d3c7b592.chunk.css",
-    "static/js/main.a7f815ab.chunk.js"
+    "static/js/main.0fee4431.chunk.js"
   ]
 }
