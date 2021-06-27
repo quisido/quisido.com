@@ -1,0 +1,11 @@
+.body {
+  contain: content;
+}
+
+.image {
+  box-sizing: border-box;
+  display: block;
+  float: left;
+  margin: 0 1em 0 0;
+  max-width: 240px;
+}

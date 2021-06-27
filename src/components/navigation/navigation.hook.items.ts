@@ -1,6 +1,7 @@
 import { SideNavigationProps } from '@awsui/components-react/side-navigation';
 import { TranslateFunction, useTranslate } from 'lazy-i18n';
 import { useMemo } from 'react';
+import RESUME_HREF from '../../constants/resume-href';
 
 export default function useItems(): SideNavigationProps.Item[] {
   const translate: TranslateFunction = useTranslate();
@@ -10,6 +11,12 @@ export default function useItems(): SideNavigationProps.Item[] {
       {
         href: '/',
         text: translate('Home') || '...',
+        type: 'link',
+      },
+      {
+        external: true,
+        href: RESUME_HREF,
+        text: translate('Résumé') || '...',
         type: 'link',
       },
       {
