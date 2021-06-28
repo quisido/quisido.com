@@ -15,12 +15,13 @@ const QUOTES: Quote[] = [
         <Box variant="p">
           Ace is an innovative, detail-oriented, and multi-talented artist. Over
           the past year, I have had the pleasure of working with them on a
-          number of projects. From <Link to="/miniatures">painting models</Link>{' '}
-          and{' '}
+          number of projects. From{' '}
+          <Link to="/projects/dark-souls-darkroot">painting models</Link> and{' '}
           <Link to="https://acealters.com">
             altering popular <abbr title="Magic: the Gathering">MTG</abbr> cards
           </Link>{' '}
-          to creating <Link to="/fabrication">custom wooden deck boxes</Link>,
+          to creating{' '}
+          <Link to="/projects/wooden-deck-box">custom wooden deck boxes</Link>,
           they have proven time and again to be extraordinarily versatile in
           their artistic abilities. And that&apos;s just the tip of the iceberg
           when it comes to what they are capable of.
@@ -47,12 +48,15 @@ const QUOTES: Quote[] = [
     image: charlesStover,
     quote: (
       <Box variant="p">
-        I have hired Ace on multiple occasions over the last few years to alter
-        and extend existing artwork. Each time, they exceeded my expectations
-        with their outstanding attention to detail and vivid imagery. With very
-        little instruction, they were able to envision, design, and finish each
-        project with better results than I could have hoped. They will remain my
-        go-to artist for a long time to come.
+        I have hired Ace on multiple occasions over the last few years to{' '}
+        <Link to="https://acealters.com">
+          alter and extend existing artwork
+        </Link>
+        . Each time, they exceeded my expectations with their outstanding
+        attention to detail and vivid imagery. With very little instruction,
+        they were able to envision, design, and finish each project with better
+        results than I could have hoped. They will remain my go-to artist for a
+        long time to come.
       </Box>
     ),
   },
