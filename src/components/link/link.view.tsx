@@ -2,7 +2,7 @@ import AwsuiLink from '@awsui/components-react/link';
 import { ReactElement, ReactNode } from 'react';
 import useLink from './link.hook';
 
-export interface Props {
+interface Props {
   children: ReactNode;
   to: string;
 }

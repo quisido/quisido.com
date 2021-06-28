@@ -22,7 +22,8 @@
     "eslint": "eslint src",
     "jest": "jest",
     "start": "react-scripts start",
-    "test": "eslint src && jest"
+    "test": "eslint src && jest",
+    "test-watch": "jest --watch"
   },
   "devDependencies": {
     "@awsui/components-react": "^3.0.174",
@@ -70,7 +71,7 @@
     "ts-jest": "^27.0.3",
     "tslib": "^2.3.0",
     "typescript": "^4.3.4",
-    "use-awsui": "^1.0.4",
+    "use-awsui": "^1.0.5",
     "use-awsui-router": "^1.1.0",
     "web-vitals": "^2.0.1"
   }

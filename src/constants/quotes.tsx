@@ -1,7 +1,7 @@
 import Box from '@awsui/components-react/box';
 import Link from '../components/link';
-import charlesStover from '../images/charles-stover.jpg';
-import mattMcclelland from '../images/matt-mcclelland.jpg';
+import charlesStover from '../images/quotes/charles-stover.jpg';
+import mattMcclelland from '../images/quotes/matt-mcclelland.jpg';
 import Quote from '../types/quote';
 
 const QUOTES: Quote[] = [

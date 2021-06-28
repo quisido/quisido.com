@@ -82,7 +82,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-jest", "virtual:fc5e721cf99fc89444d42ccac906d6375643154ede53e0f46baf27a863391b783755e05e8a990d769248195e0d53c2d25783ff84155f65c4ffdd1ebbc7d82aea#npm:27.0.3"],
             ["tslib", "npm:2.3.0"],
             ["typescript", "patch:typescript@npm%3A4.3.4#builtin<compat/typescript>::version=4.3.4&hash=ddfc1b"],
-            ["use-awsui", "virtual:fc5e721cf99fc89444d42ccac906d6375643154ede53e0f46baf27a863391b783755e05e8a990d769248195e0d53c2d25783ff84155f65c4ffdd1ebbc7d82aea#npm:1.0.4"],
+            ["use-awsui", "virtual:fc5e721cf99fc89444d42ccac906d6375643154ede53e0f46baf27a863391b783755e05e8a990d769248195e0d53c2d25783ff84155f65c4ffdd1ebbc7d82aea#npm:1.0.5"],
             ["use-awsui-router", "virtual:fc5e721cf99fc89444d42ccac906d6375643154ede53e0f46baf27a863391b783755e05e8a990d769248195e0d53c2d25783ff84155f65c4ffdd1ebbc7d82aea#npm:1.1.0"],
             ["web-vitals", "npm:2.0.1"]
           ],
@@ -18618,7 +18618,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-jest", "virtual:fc5e721cf99fc89444d42ccac906d6375643154ede53e0f46baf27a863391b783755e05e8a990d769248195e0d53c2d25783ff84155f65c4ffdd1ebbc7d82aea#npm:27.0.3"],
             ["tslib", "npm:2.3.0"],
             ["typescript", "patch:typescript@npm%3A4.3.4#builtin<compat/typescript>::version=4.3.4&hash=ddfc1b"],
-            ["use-awsui", "virtual:fc5e721cf99fc89444d42ccac906d6375643154ede53e0f46baf27a863391b783755e05e8a990d769248195e0d53c2d25783ff84155f65c4ffdd1ebbc7d82aea#npm:1.0.4"],
+            ["use-awsui", "virtual:fc5e721cf99fc89444d42ccac906d6375643154ede53e0f46baf27a863391b783755e05e8a990d769248195e0d53c2d25783ff84155f65c4ffdd1ebbc7d82aea#npm:1.0.5"],
             ["use-awsui-router", "virtual:fc5e721cf99fc89444d42ccac906d6375643154ede53e0f46baf27a863391b783755e05e8a990d769248195e0d53c2d25783ff84155f65c4ffdd1ebbc7d82aea#npm:1.1.0"],
             ["web-vitals", "npm:2.0.1"]
           ],
@@ -22014,17 +22014,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["use-awsui", [
-        ["npm:1.0.4", {
-          "packageLocation": "./.yarn/cache/use-awsui-npm-1.0.4-294998ea43-524a5668c0.zip/node_modules/use-awsui/",
+        ["npm:1.0.5", {
+          "packageLocation": "./.yarn/cache/use-awsui-npm-1.0.5-162ecae1b0-a332826a77.zip/node_modules/use-awsui/",
           "packageDependencies": [
-            ["use-awsui", "npm:1.0.4"]
+            ["use-awsui", "npm:1.0.5"]
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:fc5e721cf99fc89444d42ccac906d6375643154ede53e0f46baf27a863391b783755e05e8a990d769248195e0d53c2d25783ff84155f65c4ffdd1ebbc7d82aea#npm:1.0.4", {
-          "packageLocation": "./.yarn/$$virtual/use-awsui-virtual-b452052ea8/0/cache/use-awsui-npm-1.0.4-294998ea43-524a5668c0.zip/node_modules/use-awsui/",
+        ["virtual:fc5e721cf99fc89444d42ccac906d6375643154ede53e0f46baf27a863391b783755e05e8a990d769248195e0d53c2d25783ff84155f65c4ffdd1ebbc7d82aea#npm:1.0.5", {
+          "packageLocation": "./.yarn/$$virtual/use-awsui-virtual-07cf75c823/0/cache/use-awsui-npm-1.0.5-162ecae1b0-a332826a77.zip/node_modules/use-awsui/",
           "packageDependencies": [
-            ["use-awsui", "virtual:fc5e721cf99fc89444d42ccac906d6375643154ede53e0f46baf27a863391b783755e05e8a990d769248195e0d53c2d25783ff84155f65c4ffdd1ebbc7d82aea#npm:1.0.4"],
+            ["use-awsui", "virtual:fc5e721cf99fc89444d42ccac906d6375643154ede53e0f46baf27a863391b783755e05e8a990d769248195e0d53c2d25783ff84155f65c4ffdd1ebbc7d82aea#npm:1.0.5"],
             ["@awsui/components-react", "virtual:fc5e721cf99fc89444d42ccac906d6375643154ede53e0f46baf27a863391b783755e05e8a990d769248195e0d53c2d25783ff84155f65c4ffdd1ebbc7d82aea#npm:3.0.174"],
             ["@types/awsui__components-react", null],
             ["@types/react", "npm:17.0.11"],

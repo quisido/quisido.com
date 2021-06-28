@@ -7,18 +7,29 @@ import type CarouselItem from '../../types/carousel-item';
 import useCarousel from './carousel.hook';
 
 interface Props {
-  items: CarouselItem[];
-  title: string;
+  readonly index: number;
+  readonly items: CarouselItem[];
+  readonly onIndexChange: (index: number) => void;
+  readonly title: string;
 }
 
-export default function Carousel({ items, title }: Props): ReactElement {
+export default function Carousel({
+  index,
+  items,
+  onIndexChange,
+  title,
+}: Props): ReactElement {
   const {
     Children,
     currentPageIndex,
     handlePaginationChange,
     icons,
     itemTitle,
-  } = useCarousel(items);
+  } = useCarousel({
+    index,
+    items,
+    onIndexChange,
+  });
 
   return (
     <Container

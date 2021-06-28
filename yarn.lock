@@ -13929,7 +13929,7 @@ fsevents@^1.2.7:
     ts-jest: ^27.0.3
     tslib: ^2.3.0
     typescript: ^4.3.4
-    use-awsui: ^1.0.4
+    use-awsui: ^1.0.5
     use-awsui-router: ^1.1.0
     web-vitals: ^2.0.1
   languageName: unknown
@@ -16793,14 +16793,14 @@ typescript@^4.3.4:
   languageName: node
   linkType: hard
 
-"use-awsui@npm:^1.0.4":
-  version: 1.0.4
-  resolution: "use-awsui@npm:1.0.4"
+"use-awsui@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "use-awsui@npm:1.0.5"
   peerDependencies:
     "@awsui/components-react": ^3.0.0
     react: ^16.8.0 || ^17.0.0
     react-dom: ^16.8.0 || ^17.0.0
-  checksum: 524a5668c0300b18178c1270698495fc34fa4cf03306ccc5d3fa6151f5f4fa33ce80cd949d1e23ddd4f13504157e4d41af6c1cf91fb413780b0e2e24f63d4e5d
+  checksum: a332826a775eb4b09f639f2b16d50ec19bbe623264f76b6e91b36260ecddd9457ef324d548d07d4ee2dd5155e86c610797ed341eeaf6fd5436685a75e416990e
   languageName: node
   linkType: hard
 

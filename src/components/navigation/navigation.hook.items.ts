@@ -14,6 +14,11 @@ export default function useItems(): SideNavigationProps.Item[] {
         type: 'link',
       },
       {
+        href: '/projects',
+        text: translate('Projects') || '...',
+        type: 'link',
+      },
+      {
         external: true,
         href: RESUME_HREF,
         text: translate('Résumé') || '...',
@@ -23,17 +28,17 @@ export default function useItems(): SideNavigationProps.Item[] {
         type: 'divider',
       },
       {
-        href: '/abstract',
+        href: '/projects?type=abstract',
         text: translate('Abstract') || '...',
         type: 'link',
       },
       {
-        href: '/dry-media',
+        href: '/projects?type=dry-media',
         text: translate('Dry media') || '...',
         type: 'link',
       },
       {
-        href: '/fabrication',
+        href: '/projects?type=fabrication',
         text: translate('Fabrication') || '...',
         type: 'link',
       },
@@ -44,15 +49,15 @@ export default function useItems(): SideNavigationProps.Item[] {
         type: 'link',
       },
       {
-        href: '/miniatures',
+        href: '/projects?type=miniatures',
         text: translate('Miniatures') || '...',
         type: 'link',
       },
-      {
-        href: '/sculptures',
-        text: translate('Sculptures') || '...',
-        type: 'link',
-      },
+      // {
+      //   href: '/sculptures',
+      //   text: translate('Sculptures') || '...',
+      //   type: 'link',
+      // },
       {
         type: 'divider',
       },
