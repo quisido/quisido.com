@@ -1,6 +1,7 @@
 import type { ReactElement } from 'react';
 import { useMemo } from 'react';
 import ProjectItemBody from '../../components/project-item-body';
+import ItemId from '../../constants/item-id';
 import useMapItemIdToTitle from '../../hooks/use-map-item-id-to-title';
 import type CarouselItem from '../../types/carousel-item';
 import type ProjectItem from '../../types/project-item';
@@ -20,7 +21,7 @@ export default function useViewProjectItemCarouselItems(
     }: ProjectItem): CarouselItem => {
       return {
         icon: icon,
-        title: mapItemIdToTitle(id) || '...',
+        title: id === ItemId.Index ? null : mapItemIdToTitle(id) || '...',
         Body: function CarouselItemBody(): ReactElement {
           return <ProjectItemBody date={date} images={images} />;
         },

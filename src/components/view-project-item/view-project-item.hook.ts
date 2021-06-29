@@ -3,6 +3,7 @@ import type { TranslateFunction } from 'lazy-i18n';
 import { useTranslate } from 'lazy-i18n';
 import { useCallback, useMemo } from 'react';
 import { useHistory } from 'react-router';
+import ItemId from '../../constants/item-id';
 import ProjectId from '../../constants/project-id';
 import PROJECTS from '../../constants/projects';
 import useMapItemIdToTitle from '../../hooks/use-map-item-id-to-title';
@@ -44,23 +45,33 @@ export default function useViewProjectItem({
     carouselItems: useCarouselItems(project.items),
     title: projectTitle || '...',
 
-    breadcrumbs: useMemo(
-      (): BreadcrumbGroupProps.Item[] => [
+    breadcrumbs: useMemo((): BreadcrumbGroupProps.Item[] => {
+      const mapItemIdToHref = (id: ItemId): string => {
+        if (id === ItemId.Index) {
+          return `/projects/${projectId}`;
+        }
+        return `/projects/${projectId}/${id}`;
+      };
+
+      const newBreadcrumbs: BreadcrumbGroupProps.Item[] = [
         {
           href: '/projects',
           text: translate('Projects') || '...',
         },
         {
-          href: `/projects/${projectId}/${firstItemId}`,
+          href: mapItemIdToHref(firstItemId),
           text: projectTitle || '...',
         },
-        {
-          href: `/projects/${projectId}/${itemId}`,
-          text: itemTitle || '...',
-        },
-      ],
-      [firstItemId, itemId, itemTitle, projectId, projectTitle, translate],
-    ),
+      ];
+      if (itemId === ItemId.Index) {
+        return newBreadcrumbs;
+      }
+      newBreadcrumbs.push({
+        href: mapItemIdToHref(itemId),
+        text: itemTitle || '...',
+      });
+      return newBreadcrumbs;
+    }, [firstItemId, itemId, itemTitle, projectId, projectTitle, translate]),
 
     handleIndexChange: useCallback(
       (newIndex: number): void => {

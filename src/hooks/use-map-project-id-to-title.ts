@@ -16,6 +16,8 @@ export default function useMapProjectIdToTitle(): (
           return 'Dark Souls: Darkroot';
         case ProjectId.StudyOfNightZagWall:
           return translate('Study of Night Zag Wall');
+        case ProjectId.WoodenDeckBox:
+          return translate('Wooden Deck Box');
       }
     },
     [translate],

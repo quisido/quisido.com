@@ -14,10 +14,14 @@ export default function useMapItemIdToTitle(): (
       switch (id) {
         case ItemId.Artorias:
           return 'Artorias';
+        case ItemId.Blueprint:
+          return translate('Blueprint');
         case ItemId.DemonicFoliage:
           return translate('Demonic Foliage');
         case ItemId.Elevation:
           return translate('Elevation');
+        case ItemId.Index:
+          return;
         case ItemId.MushroomParentAndChild:
           return translate('Mushroom Parent and Child');
         case ItemId.Pieces:

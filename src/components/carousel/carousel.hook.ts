@@ -16,7 +16,7 @@ interface State {
   readonly Children: ComponentType<unknown>;
   readonly currentPageIndex: number;
   readonly icons: string[];
-  readonly itemTitle: string;
+  readonly itemTitle: null | string;
   readonly handlePaginationChange: (
     event: NonCancelableCustomEvent<PaginationProps.ChangeDetail>,
   ) => void;

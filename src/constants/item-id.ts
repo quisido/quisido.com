@@ -1,7 +1,9 @@
 enum ItemId {
   Artorias = 'artorias',
+  Blueprint = 'blueprint',
   DemonicFoliage = 'demonic-foliage',
   Elevation = 'elevation',
+  Index = 'index',
   MushroomParentAndChild = 'mushroom-parent-and-child',
   Pieces = 'pieces',
   PlowScarecrow = 'plow-scarecrow',
