@@ -10,6 +10,7 @@ import useMapProjectIdToTitle from '../../hooks/use-map-project-id-to-title';
 import type CarouselItem from '../../types/carousel-item';
 import type Project from '../../types/project';
 import type ProjectItem from '../../types/project-item';
+import useCarouselItems from './view-project-item.hook.carousel-items';
 
 interface Props {
   readonly itemIndex: number;
@@ -40,6 +41,7 @@ export default function useViewProjectItem({
   const projectTitle: string | undefined = mapProjectIdToTitle(projectId);
 
   return {
+    carouselItems: useCarouselItems(project.items),
     title: projectTitle || '...',
 
     breadcrumbs: useMemo(
@@ -59,20 +61,6 @@ export default function useViewProjectItem({
       ],
       [firstItemId, itemId, itemTitle, projectId, projectTitle, translate],
     ),
-
-    carouselItems: useMemo((): CarouselItem[] => {
-      const mapProjectItemToCarouselItem = (
-        item: ProjectItem,
-      ): CarouselItem => {
-        return {
-          body: item.body,
-          icon: item.icon,
-          title: mapItemIdToTitle(item.id) || '...',
-        };
-      };
-
-      return project.items.map(mapProjectItemToCarouselItem);
-    }, [mapItemIdToTitle, project.items]),
 
     handleIndexChange: useCallback(
       (newIndex: number): void => {

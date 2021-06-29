@@ -12,6 +12,8 @@ export default function useMapProjectIdToTitle(): (
   return useCallback(
     (id: ProjectId): string | undefined => {
       switch (id) {
+        case ProjectId.DarkSoulsDarkroot:
+          return 'Dark Souls: Darkroot';
         case ProjectId.StudyOfNightZagWall:
           return translate('Study of Night Zag Wall');
       }

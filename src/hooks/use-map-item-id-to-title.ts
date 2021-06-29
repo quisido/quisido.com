@@ -12,12 +12,28 @@ export default function useMapItemIdToTitle(): (
   return useCallback(
     (id: ItemId): string | undefined => {
       switch (id) {
+        case ItemId.Artorias:
+          return 'Artorias';
+        case ItemId.DemonicFoliage:
+          return translate('Demonic Foliage');
         case ItemId.Elevation:
           return translate('Elevation');
+        case ItemId.MushroomParentAndChild:
+          return translate('Mushroom Parent and Child');
         case ItemId.Pieces:
           return translate('Pieces');
+        case ItemId.PlowScarecrow:
+          return translate('Plow Scarecrow');
         case ItemId.Portions:
           return translate('Portions');
+        case ItemId.ShearsScarecrow:
+          return translate('Shears Scarecrow');
+        case ItemId.SifTheGreatGreyWolf:
+          return translate('Sif, the Great Grey Wolf');
+        case ItemId.StoneGuardian:
+          return translate('Stone Guardian');
+        case ItemId.StoneKnight:
+          return translate('Stone Knight');
       }
     },
     [translate],

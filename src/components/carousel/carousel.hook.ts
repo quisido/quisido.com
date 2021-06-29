@@ -37,13 +37,13 @@ export default function useCarousel({
     ),
   });
 
-  const item: CarouselItem = items[index];
+  const { Body, title }: CarouselItem = items[index];
 
   return {
-    Children: item.body,
+    Children: Body,
     currentPageIndex: index + 1,
     handlePaginationChange,
     icons: useMemo((): string[] => items.map(mapItemToIcon), [items]),
-    itemTitle: item.title,
+    itemTitle: title,
   };
 }

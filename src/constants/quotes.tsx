@@ -16,7 +16,10 @@ const QUOTES: Quote[] = [
           Ace is an innovative, detail-oriented, and multi-talented artist. Over
           the past year, I have had the pleasure of working with them on a
           number of projects. From{' '}
-          <Link to="/projects/dark-souls-darkroot">painting models</Link> and{' '}
+          <Link to="/projects/dark-souls-darkroot/artorias">
+            painting models
+          </Link>{' '}
+          and{' '}
           <Link to="https://acealters.com">
             altering popular <abbr title="Magic: the Gathering">MTG</abbr> cards
           </Link>{' '}
