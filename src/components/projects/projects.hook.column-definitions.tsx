@@ -25,8 +25,12 @@ export default function useProjectsColumnDefinitions(): TableProps.ColumnDefinit
         header: '',
         id: 'icon',
         width: 64,
-        cell({ icon }: Item): ReactElement {
-          return <img alt="" aria-hidden height={24} src={icon} width={24} />;
+        cell({ icon, pathname }: Item): ReactElement {
+          return (
+            <Link to={pathname}>
+              <img alt="" aria-hidden height={24} src={icon} width={24} />
+            </Link>
+          );
         },
       },
       {
