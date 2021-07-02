@@ -48,22 +48,22 @@ const DARK_SOULS_DARKROOT: Project = {
       id: ItemId.Artorias,
       images: [
         {
-          height: 190,
+          height: 2752,
           src: artoriasFront,
           thumbnail: artoriasFront240,
-          width: 240,
+          width: 3472,
         },
         {
-          height: 220,
+          height: 2484,
           src: artoriasSide,
           thumbnail: artoriasSide240,
-          width: 240,
+          width: 2704,
         },
         {
-          height: 209,
+          height: 2620,
           src: artoriasBack,
           thumbnail: artoriasBack240,
-          width: 240,
+          width: 3012,
         },
       ],
     },
@@ -75,10 +75,10 @@ const DARK_SOULS_DARKROOT: Project = {
       id: ItemId.DemonicFoliage,
       images: [
         {
-          height: 162,
+          height: 2544,
           src: demonicFoliage,
           thumbnail: demonicFoliage240,
-          width: 240,
+          width: 3768,
         },
       ],
     },
@@ -90,16 +90,16 @@ const DARK_SOULS_DARKROOT: Project = {
       id: ItemId.MushroomParentAndChild,
       images: [
         {
-          height: 172,
+          height: 2592,
           src: mushroomParentAndChildFront,
           thumbnail: mushroomParentAndChildFront240,
-          width: 240,
+          width: 3608,
         },
         {
-          height: 166,
+          height: 2608,
           src: mushroomParentAndChildBack,
           thumbnail: mushroomParentAndChildBack240,
-          width: 240,
+          width: 3772,
         },
       ],
     },
@@ -111,10 +111,10 @@ const DARK_SOULS_DARKROOT: Project = {
       id: ItemId.PlowScarecrow,
       images: [
         {
-          height: 93,
+          height: 1960,
           src: plowScarecrow,
           thumbnail: plowScarecrow240,
-          width: 240,
+          width: 5056,
         },
       ],
     },
@@ -126,10 +126,10 @@ const DARK_SOULS_DARKROOT: Project = {
       id: ItemId.ShearsScarecrow,
       images: [
         {
-          height: 98,
+          height: 2084,
           src: shearsScarecrow,
           thumbnail: shearsScarecrow240,
-          width: 240,
+          width: 5116,
         },
       ],
     },
@@ -141,22 +141,22 @@ const DARK_SOULS_DARKROOT: Project = {
       id: ItemId.SifTheGreatGreyWolf,
       images: [
         {
-          height: 246,
+          height: 2224,
           src: sifTheGreatGreyWolfFront,
           thumbnail: sifTheGreatGreyWolfFront240,
-          width: 240,
+          width: 2172,
         },
         {
-          height: 216,
+          height: 2752,
           src: sifTheGreatGreyWolfRight,
           thumbnail: sifTheGreatGreyWolfRight240,
-          width: 240,
+          width: 3052,
         },
         {
-          height: 148,
+          height: 2308,
           src: sifTheGreatGreyWolfLeft,
           thumbnail: sifTheGreatGreyWolfLeft240,
-          width: 240,
+          width: 3740,
         },
       ],
     },
@@ -168,16 +168,16 @@ const DARK_SOULS_DARKROOT: Project = {
       id: ItemId.StoneGuardian,
       images: [
         {
-          height: 138,
+          height: 2248,
           src: stoneGuardianFront,
           thumbnail: stoneGuardianFront240,
-          width: 240,
+          width: 3904,
         },
         {
-          height: 164,
+          height: 2536,
           src: stoneGuardianSide,
           thumbnail: stoneGuardianSide240,
-          width: 240,
+          width: 3720,
         },
       ],
     },
@@ -189,10 +189,10 @@ const DARK_SOULS_DARKROOT: Project = {
       id: ItemId.StoneKnight,
       images: [
         {
-          height: 134,
+          height: 2424,
           src: stoneKnight,
           thumbnail: stoneKnight240,
-          width: 240,
+          width: 4356,
         },
       ],
     },

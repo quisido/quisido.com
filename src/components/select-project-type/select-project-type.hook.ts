@@ -40,7 +40,14 @@ export default function useSelectProjectType({
 
     handleChange: useCallback(
       (e: NonCancelableCustomEvent<SelectProps.ChangeDetail>): void => {
-        onChange(e.detail.selectedOption.value as ProjectType | undefined);
+        const newValue: ProjectType | '' = e.detail.selectedOption.value as
+          | ProjectType
+          | '';
+        if (newValue === '') {
+          onChange();
+        } else {
+          onChange(newValue);
+        }
       },
       [onChange],
     ),

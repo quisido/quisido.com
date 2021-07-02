@@ -1,6 +1,5 @@
 import Container from '@awsui/components-react/container';
 import Header from '@awsui/components-react/header';
-import I18n from 'lazy-i18n';
 import type { ReactElement } from 'react';
 import AwsuiIconPagination from '../../shared/awsui-icon-pagination';
 import type CarouselItem from '../../types/carousel-item';
@@ -22,6 +21,7 @@ export default function Carousel({
   const {
     Children,
     currentPageIndex,
+    description,
     handlePaginationChange,
     icons,
     itemTitle,
@@ -29,12 +29,14 @@ export default function Carousel({
     index,
     items,
     onIndexChange,
+    title,
   });
 
   return (
     <Container
       header={
         <Header
+          description={description}
           actions={
             <AwsuiIconPagination
               currentPageIndex={currentPageIndex}
@@ -43,11 +45,6 @@ export default function Carousel({
               onChange={handlePaginationChange}
               width={24}
             />
-          }
-          description={
-            <I18n n={currentPageIndex} title={title} total={items.length}>
-              $title ($n/$total)
-            </I18n>
           }
         >
           {itemTitle}

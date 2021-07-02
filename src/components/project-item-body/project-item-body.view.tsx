@@ -1,10 +1,13 @@
 import type { BoxProps } from '@awsui/components-react/box';
 import Box from '@awsui/components-react/box';
 import ColumnLayout from '@awsui/components-react/column-layout';
-import I18n, { TranslateFunction, useTranslate } from 'lazy-i18n';
+import I18n from 'lazy-i18n';
 import type { ReactElement } from 'react';
-import ProjectItemImage from '../../types/project-item-image';
+import type ProjectItemImage from '../../types/project-item-image';
+import mapComponentToPropMapper from '../../utils/map-component-to-prop-mapper';
+import useProjectItemBody from './project-item-body.hook';
 import styles from './project-item-body.module.scss';
+import ImageLink from './project-item-body.view.image-link';
 
 interface Props {
   date: string;
@@ -15,30 +18,15 @@ const TEXT_LABEL_MARGIN: BoxProps.Spacing = {
   bottom: 'xxxs',
 };
 
+const mapImageLinkPropsToElement = mapComponentToPropMapper(ImageLink);
+
 export default function ProjectItemBody({ date, images }: Props): ReactElement {
-  const translate: TranslateFunction = useTranslate();
+  const { imageLinkProps, imagesClassName } = useProjectItemBody({ images });
 
   return (
     <div className={styles.body}>
-      <div className={styles.images}>
-        {images.map(
-          (image: ProjectItemImage, index: number): ReactElement => (
-            <a
-              href={image.src}
-              key={image.src}
-              rel="noreferrer"
-              target="_blank"
-            >
-              <img
-                alt={translate('Image $n', { n: index + 1 })}
-                className={styles.image}
-                height={image.height}
-                src={image.thumbnail}
-                width={image.width}
-              />
-            </a>
-          ),
-        )}
+      <div className={imagesClassName}>
+        {imageLinkProps.map(mapImageLinkPropsToElement)}
       </div>
       <ColumnLayout variant="text-grid">
         <div>

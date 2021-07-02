@@ -16,10 +16,16 @@ export default function useMapItemIdToTitle(): (
           return 'Artorias';
         case ItemId.Blueprint:
           return translate('Blueprint');
+        case ItemId.BrittanyWelsh:
+          return 'Brittany Welsh';
+        case ItemId.Chiaroscuro:
+          return translate('Chiaroscuro');
         case ItemId.DemonicFoliage:
           return translate('Demonic Foliage');
         case ItemId.Elevation:
           return translate('Elevation');
+        case ItemId.GirlInTheRedDress:
+          return translate('Girl in the Red Dress');
         case ItemId.Index:
           return;
         case ItemId.MushroomParentAndChild:

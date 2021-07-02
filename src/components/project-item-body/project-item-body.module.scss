@@ -2,15 +2,37 @@
   contain: content;
 }
 
-.image {
-  display: block;
-  margin: 0 1em 1em 0;
-  width: 100%;
-}
-
 .images {
   display: flex;
-  flex-wrap: wrap;
-  float: left;
-  max-width: 240px;
+
+  &.horizontalImages {
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    > .imageLink {
+      margin: 0 0.5em 1em 0.5em;
+
+      > .image {
+        display: block;
+        height: 240px;
+        width: auto;
+      }
+    }
+  }
+
+  &.verticalImages {
+    flex-direction: column;
+    float: left;
+    max-width: 240px;
+
+    .imageLink {
+      margin: 0 1em 1em 0;
+
+      > .image {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
 }

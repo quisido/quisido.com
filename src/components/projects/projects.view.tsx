@@ -42,16 +42,16 @@ export default function Projects(): ReactElement {
         visibleColumns={visibleColumns}
         wrapLines={false}
         empty={
-          <Box variant="p">
-            <SpaceBetween direction="vertical" size="m">
+          <SpaceBetween direction="vertical" size="m">
+            <Box variant="p">
               <I18n>No projects matched your filter.</I18n>
-              <Link to="/projects">
-                <Button>
-                  <I18n>Reset</I18n>
-                </Button>
-              </Link>
-            </SpaceBetween>
-          </Box>
+            </Box>
+            <Link to="/projects">
+              <Button>
+                <I18n>Reset</I18n>
+              </Button>
+            </Link>
+          </SpaceBetween>
         }
         filter={
           <FormField>

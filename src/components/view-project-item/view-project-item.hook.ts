@@ -42,7 +42,6 @@ export default function useViewProjectItem({
   const projectTitle: string | undefined = mapProjectIdToTitle(projectId);
 
   return {
-    carouselItems: useCarouselItems(project.items),
     title: projectTitle || '...',
 
     breadcrumbs: useMemo((): BreadcrumbGroupProps.Item[] => {
@@ -72,6 +71,11 @@ export default function useViewProjectItem({
       });
       return newBreadcrumbs;
     }, [firstItemId, itemId, itemTitle, projectId, projectTitle, translate]),
+
+    carouselItems: useCarouselItems({
+      items: project.items,
+      projectTitle,
+    }),
 
     handleIndexChange: useCallback(
       (newIndex: number): void => {

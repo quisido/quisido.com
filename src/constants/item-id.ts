@@ -1,9 +1,12 @@
 enum ItemId {
   Artorias = 'artorias',
   Blueprint = 'blueprint',
+  BrittanyWelsh = 'brittany-welsh',
+  Chiaroscuro = 'chiaroscuro',
   DemonicFoliage = 'demonic-foliage',
   Elevation = 'elevation',
-  Index = 'index',
+  GirlInTheRedDress = 'girl-in-the-red-dress',
+  Index = '',
   MushroomParentAndChild = 'mushroom-parent-and-child',
   Pieces = 'pieces',
   PlowScarecrow = 'plow-scarecrow',
