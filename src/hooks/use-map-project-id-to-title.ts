@@ -18,6 +18,8 @@ export default function useMapProjectIdToTitle(): (
           return 'Dark Souls: Darkroot';
         case ProjectId.MiscellaneousDryMedia:
           return translate('Miscellaneous Dry Media');
+        case ProjectId.ResinRiverBox:
+          return translate('Resin River Box');
         case ProjectId.StudyOfNightZagWall:
           return translate('Study of Night Zag Wall');
         case ProjectId.WoodenDeckBox:
