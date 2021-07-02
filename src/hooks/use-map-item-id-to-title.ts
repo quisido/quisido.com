@@ -20,6 +20,8 @@ export default function useMapItemIdToTitle(): (
           return 'Brittany Welsh';
         case ItemId.Chiaroscuro:
           return translate('Chiaroscuro');
+        case ItemId.Collage:
+          return translate('Collage');
         case ItemId.DemonicFoliage:
           return translate('Demonic Foliage');
         case ItemId.Elevation:
@@ -40,6 +42,8 @@ export default function useMapItemIdToTitle(): (
           return translate('Shears Scarecrow');
         case ItemId.SifTheGreatGreyWolf:
           return translate('Sif, the Great Grey Wolf');
+        case ItemId.Source:
+          return translate('Source');
         case ItemId.StoneGuardian:
           return translate('Stone Guardian');
         case ItemId.StoneKnight:

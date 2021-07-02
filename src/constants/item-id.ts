@@ -2,6 +2,7 @@ enum ItemId {
   Artorias = 'artorias',
   Blueprint = 'blueprint',
   BrittanyWelsh = 'brittany-welsh',
+  Collage = 'collage',
   Chiaroscuro = 'chiaroscuro',
   DemonicFoliage = 'demonic-foliage',
   Elevation = 'elevation',
@@ -13,6 +14,7 @@ enum ItemId {
   Portions = 'portions',
   ShearsScarecrow = 'shears-scarecrow',
   SifTheGreatGreyWolf = 'sif-great-grey-wolf',
+  Source = 'source',
   StoneGuardian = 'stone-guardian',
   StoneKnight = 'stone-knight',
 }

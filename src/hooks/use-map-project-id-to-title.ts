@@ -16,6 +16,8 @@ export default function useMapProjectIdToTitle(): (
           return translate('Conference Table');
         case ProjectId.DarkSoulsDarkroot:
           return 'Dark Souls: Darkroot';
+        case ProjectId.LakeCollage:
+          return translate('Lake Collage');
         case ProjectId.MiscellaneousDryMedia:
           return translate('Miscellaneous Dry Media');
         case ProjectId.ResinRiverBox:

@@ -5,6 +5,7 @@ import mattMcclelland from '../images/quotes/matt-mcclelland.jpg';
 import Quote from '../types/quote';
 
 const QUOTES: Quote[] = [
+  // Matt McClelland
   {
     age: 25,
     author: 'Matt McClelland',
@@ -44,6 +45,7 @@ const QUOTES: Quote[] = [
     ),
   },
 
+  // Charles Stover
   {
     age: 30,
     author: 'Charles Stover',
@@ -54,8 +56,10 @@ const QUOTES: Quote[] = [
         I have hired Ace on multiple occasions over the last few years to{' '}
         <Link to="https://acealters.com">
           alter and extend existing artwork
-        </Link>
-        . Each time, they exceeded my expectations with their outstanding
+        </Link>{' '}
+        and for a{' '}
+        <Link to="/projects/resin-river-box">beautiful storage container</Link>.
+        Each time, they exceeded my expectations with their outstanding
         attention to detail and vivid imagery. With very little instruction,
         they were able to envision, design, and finish each project with better
         results than I could have hoped. They will remain my go-to artist for a
