@@ -12,7 +12,7 @@ import source240 from '../../images/lake-collage/source--240.jpg';
 import Project from '../../types/project';
 
 const LAKE_COLLAGE: Project = {
-  type: ProjectType.Fabrication,
+  type: ProjectType.DryMedia,
   items: [
     {
       date: '2017-07-16',
