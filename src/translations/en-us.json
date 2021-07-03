@@ -2,7 +2,7 @@
   "$title ($n/$total)": "$title ($n/$total)",
   "Abstract": "Abstract",
   "Abstractions": "Abstractions",
-  "All types": "All types",
+  "All": "All",
   "Avatar": "Avatar",
   "Blueprint": "Blueprint",
   "Breadcrumbs": "Breadcrumbs",
@@ -17,6 +17,7 @@
   "Elevation": "Elevation",
   "external": "external",
   "Fabrication": "Fabrication",
+  "Filter": "Filter",
   "Girl in the Red Dress": "Girl in the Red Dress",
   "Home": "Home",
   "Image $n": "Image $n",
@@ -38,7 +39,6 @@
   "Resin River Box": "Resin River Box",
   "Résumé": "Résumé",
   "Review by $author": "Review by $author",
-  "Select type": "Select type",
   "Selected type": "Selected type",
   "Shears Scarecrow": "Plow Scarecrow",
   "Sif, the Great Grey Wolf": "Sif, the Great Grey Wolf",
@@ -51,6 +51,7 @@
   "Toggle tools": "Toggle tools",
   "Tools": "Tools",
   "Type": "Type",
+  "View projects": "View projects",
   "View résumé": "View résumé",
   "Wooden Deck Box": "Wooden Deck Box"
 }

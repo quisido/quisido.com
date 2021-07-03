@@ -52,7 +52,7 @@ export default function useSelectProjectTypeOptions(): SelectProps.Option[] {
 
     return [
       {
-        label: translate('All types') || '...',
+        label: translate('All') || '...',
         value: '',
       },
       ...Array.from(PROJECT_TYPES.values())

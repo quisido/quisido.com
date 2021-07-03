@@ -35,7 +35,7 @@ export default function useSelectProjectType({
   return {
     ariaLabel: translate('Type'),
     options,
-    placeholder: translate('Select type'),
+    placeholder: translate('Filter'),
     selectedAriaLabel: translate('Selected type'),
 
     handleChange: useCallback(

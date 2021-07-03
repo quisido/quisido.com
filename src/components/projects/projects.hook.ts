@@ -1,6 +1,6 @@
 import type { BreadcrumbGroupProps } from '@awsui/components-react/breadcrumb-group';
-import { NonCancelableCustomEvent } from '@awsui/components-react/internal/events';
-import { PaginationProps } from '@awsui/components-react/pagination';
+import type { NonCancelableCustomEvent } from '@awsui/components-react/internal/events';
+import type { PaginationProps } from '@awsui/components-react/pagination';
 import type { TableProps } from '@awsui/components-react/table';
 import type { TranslateFunction } from 'lazy-i18n';
 import { useTranslate } from 'lazy-i18n';

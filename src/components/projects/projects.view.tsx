@@ -54,12 +54,14 @@ export default function Projects(): ReactElement {
           </SpaceBetween>
         }
         filter={
-          <FormField>
-            <SelectProjectType
-              onChange={handleProjectTypeChange}
-              value={projectType}
-            />
-          </FormField>
+          <>
+            <FormField>
+              <SelectProjectType
+                onChange={handleProjectTypeChange}
+                value={projectType}
+              />
+            </FormField>
+          </>
         }
         header={
           <Header>

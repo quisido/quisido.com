@@ -3,9 +3,9 @@ import ProjectType from '../../constants/project-type';
 import brittanyWelsh from '../../images/miscellaneous-dry-media/brittany-welsh.jpg';
 import brittanyWelsh24 from '../../images/miscellaneous-dry-media/brittany-welsh--24.jpg';
 import brittanyWelsh240 from '../../images/miscellaneous-dry-media/brittany-welsh--240.jpg';
-import chiaroscuro from '../../images/miscellaneous-dry-media/chiaroscuro.jpg';
-import chiaroscuro24 from '../../images/miscellaneous-dry-media/chiaroscuro--24.jpg';
-import chiaroscuro240 from '../../images/miscellaneous-dry-media/chiaroscuro--240.jpg';
+// import chiaroscuro from '../../images/miscellaneous-dry-media/chiaroscuro.jpg';
+// import chiaroscuro24 from '../../images/miscellaneous-dry-media/chiaroscuro--24.jpg';
+// import chiaroscuro240 from '../../images/miscellaneous-dry-media/chiaroscuro--240.jpg';
 import girlInTheRedDress from '../../images/miscellaneous-dry-media/girl-in-the-red-dress.jpg';
 import girlInTheRedDress24 from '../../images/miscellaneous-dry-media/girl-in-the-red-dress--24.jpg';
 import girlInTheRedDress240 from '../../images/miscellaneous-dry-media/girl-in-the-red-dress--240.jpg';
@@ -16,7 +16,7 @@ const MISCELLANEOUS_DRY_MEDIA: Project = {
   items: [
     // Brittany Welsh
     {
-      date: 'Unknown',
+      date: '2014',
       icon: brittanyWelsh24,
       id: ItemId.BrittanyWelsh,
       images: [
@@ -30,6 +30,7 @@ const MISCELLANEOUS_DRY_MEDIA: Project = {
     },
 
     // Chiaroscuro
+    /*
     {
       date: '2016-12-15',
       icon: chiaroscuro24,
@@ -43,10 +44,11 @@ const MISCELLANEOUS_DRY_MEDIA: Project = {
         },
       ],
     },
+    */
 
     // Girl in the Red Dress
     {
-      date: 'Unknown',
+      date: '2014',
       icon: girlInTheRedDress24,
       id: ItemId.GirlInTheRedDress,
       images: [
