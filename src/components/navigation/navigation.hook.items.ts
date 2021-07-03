@@ -63,6 +63,12 @@ export default function useItems(): SideNavigationProps.Item[] {
       },
       {
         external: true,
+        href: 'mailto:ace@quisido.com',
+        text: translate('Email') || '...',
+        type: 'link',
+      },
+      {
+        external: true,
         href: 'https://www.linkedin.com/in/acequisido/',
         text: 'LinkedIn',
         type: 'link',

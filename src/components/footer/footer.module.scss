@@ -1,0 +1,79 @@
+@import '@awsui/design-tokens/index.scss';
+
+$background-gap: 25%;
+
+$bisexual-flag: linear-gradient(
+  #d70071 0%,
+  #d70071 40%,
+  #9c4e97 40%,
+  #9c4e97 60%,
+  #0035aa 60%,
+  #0035aa 100%
+);
+
+$non-binary-flag: linear-gradient(
+  #fcf434 0%,
+  #fcf434 25%,
+  #fcfcfc 25%,
+  #fcfcfc 50%,
+  #9c59d1 50%,
+  #9c59d1 75%,
+  #2c2c2c 75%,
+  #2c2c2c 100%
+);
+
+.root {
+  margin-bottom: -2rem !important;
+  margin-left: -4rem !important;
+  margin-right: -4rem !important;
+  opacity: 0.8;
+  position: relative;
+
+  &::before {
+    background-image: linear-gradient(
+        to right,
+        transparent 0%,
+        $color-background-layout-main 100% - $background-gap,
+        $color-background-layout-main 100%
+      ),
+      $bisexual-flag,
+      linear-gradient(
+        to right,
+        $color-background-layout-main 0%,
+        $color-background-layout-main $background-gap,
+        transparent 100%
+      ),
+      $non-binary-flag;
+    background-position: 0 0, 0 0, 100% 0, 100% 0;
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+    bottom: 0;
+    content: '';
+    left: 0;
+    opacity: 0.333;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  > li:not(:first-child) {
+    margin-left: 1em;
+
+    &::before {
+      content: '\2022';
+      margin-right: 1em;
+      opacity: 0.333;
+    }
+  }
+}
