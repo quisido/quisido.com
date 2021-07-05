@@ -1,10 +1,11 @@
+import Cards from '@awsui/components-react/cards';
 import FormField from '@awsui/components-react/form-field';
 import Pagination from '@awsui/components-react/pagination';
-import Table from '@awsui/components-react/table';
 import type { ReactElement } from 'react';
 import AppLayout from '../../components/app-layout';
 import ProjectBanner from '../../components/project-banner';
 import SelectProjectType from '../../components/select-project-type';
+import CARD_DEFINITION from './projects.constant.card-definition';
 import useProjects from './projects.hook';
 import Empty from './projects.view.empty';
 import Header from './projects.view.header';
@@ -12,35 +13,26 @@ import Header from './projects.view.header';
 export default function Projects(): ReactElement {
   const {
     breadcrumbs,
-    columnDefinitions,
     currentPageIndex,
     handlePaginationChange,
     handleProjectTypeChange,
-    handleSortingChange,
     items,
     pagesCount,
     projectType,
-    sortingColumn,
-    sortingDescending,
-    visibleColumns,
+    visibleSections,
   } = useProjects();
 
   return (
     <AppLayout breadcrumbs={breadcrumbs} contentType="table" toolsHide>
       {projectType && <ProjectBanner>{projectType}</ProjectBanner>}
-      <Table
-        columnDefinitions={columnDefinitions}
+      <Cards
+        cardDefinition={CARD_DEFINITION}
         empty={<Empty />}
         header={<Header />}
         items={items}
-        onSortingChange={handleSortingChange}
-        resizableColumns={false}
-        sortingColumn={sortingColumn}
-        sortingDescending={sortingDescending}
         stickyHeader
         trackBy="id"
-        visibleColumns={visibleColumns}
-        wrapLines={false}
+        visibleSections={visibleSections}
         filter={
           <>
             <FormField>

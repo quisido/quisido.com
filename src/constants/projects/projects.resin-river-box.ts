@@ -18,6 +18,7 @@ import pic7_240 from '../../images/resin-river-box/7--240.jpg';
 import Project from '../../types/project';
 
 const RESIN_RIVER_BOX: Project = {
+  icon: pic7_240,
   type: ProjectType.Fabrication,
   items: [
     {

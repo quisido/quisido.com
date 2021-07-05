@@ -19,7 +19,7 @@ import Project from '../../types/project';
 import ItemId from '../item-id';
 
 const WOODEN_DECK_BOX: Project = {
-  icon: index1_24,
+  icon: index1_240,
   type: ProjectType.Fabrication,
   items: [
     {

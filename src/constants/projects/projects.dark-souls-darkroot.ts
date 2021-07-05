@@ -39,6 +39,7 @@ import stoneKnight240 from '../../images/dark-souls-darkroot/stone-knight--240.j
 import Project from '../../types/project';
 
 const DARK_SOULS_DARKROOT: Project = {
+  icon: artoriasSide240,
   type: ProjectType.Miniatures,
   items: [
     // Artorias

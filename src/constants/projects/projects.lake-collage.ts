@@ -12,6 +12,7 @@ import source240 from '../../images/lake-collage/source--240.jpg';
 import Project from '../../types/project';
 
 const LAKE_COLLAGE: Project = {
+  icon: piece240,
   type: ProjectType.DryMedia,
   items: [
     {

@@ -3,6 +3,7 @@ import { BreadcrumbGroupProps } from '@awsui/components-react/breadcrumb-group';
 import { FlashbarProps } from '@awsui/components-react/flashbar';
 import { ComponentType, ReactElement, ReactNode } from 'react';
 import Breadcrumbs from '../../components/breadcrumbs';
+import Footer from '../../components/footer';
 import Navigation from '../../components/navigation';
 import Notifications from '../../components/notifications';
 import useAppLayout from './app-layout.hook';
@@ -51,7 +52,12 @@ export default function CustomAppLayout({
         breadcrumbs={
           !breadcrumbsHide && <Breadcrumbs>{breadcrumbs}</Breadcrumbs>
         }
-        content={children}
+        content={
+          <>
+            {children}
+            <Footer />
+          </>
+        }
         contentType={contentType}
         navigation={<Navigation />}
         navigationOpen={navigationOpen}

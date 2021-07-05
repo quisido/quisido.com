@@ -12,6 +12,7 @@ import portions240 from '../../images/study-of-night-zag-wall/portions--240.jpg'
 import Project from '../../types/project';
 
 const STUDY_OF_NIGHT_ZAG_WALL: Project = {
+  icon: pieces240,
   type: ProjectType.Abstract,
   items: [
     {

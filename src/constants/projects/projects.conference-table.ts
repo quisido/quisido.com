@@ -12,6 +12,7 @@ import pic4_240 from '../../images/conference-table/4--240.jpg';
 import Project from '../../types/project';
 
 const CONFERENCE_TABLE: Project = {
+  icon: pic1_240,
   type: ProjectType.Fabrication,
   items: [
     {

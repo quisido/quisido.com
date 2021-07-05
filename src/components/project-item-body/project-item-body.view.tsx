@@ -24,7 +24,7 @@ export default function ProjectItemBody({ date, images }: Props): ReactElement {
   const { imageLinkProps, imagesClassName } = useProjectItemBody({ images });
 
   return (
-    <div className={styles.body}>
+    <div className={styles.root}>
       <div className={imagesClassName}>
         {imageLinkProps.map(mapImageLinkPropsToElement)}
       </div>

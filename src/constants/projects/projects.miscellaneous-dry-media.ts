@@ -12,6 +12,7 @@ import girlInTheRedDress240 from '../../images/miscellaneous-dry-media/girl-in-t
 import Project from '../../types/project';
 
 const MISCELLANEOUS_DRY_MEDIA: Project = {
+  icon: brittanyWelsh240,
   type: ProjectType.DryMedia,
   items: [
     // Brittany Welsh

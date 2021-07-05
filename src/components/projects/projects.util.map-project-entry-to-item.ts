@@ -7,11 +7,9 @@ export default function mapProjectEntryToItem([
   projectId,
   { icon, items, type },
 ]: [ProjectId, Project]): Item {
-  const itemsCount: number = items.length;
   const { id: firstItemId }: ProjectItem = items[0];
-  const { icon: lastItemIcon }: ProjectItem = items[itemsCount - 1];
   return {
-    icon: icon || lastItemIcon,
+    icon,
     id: projectId,
     pathname: `/projects/${projectId}/${firstItemId}`,
     type,

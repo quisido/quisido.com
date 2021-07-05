@@ -14,7 +14,7 @@ export default function Footer(): ReactElement {
             <I18n>Email me</I18n>
           </Link>
         </li>
-        <li>LGBTQIA</li>
+        <li>LGBT+</li>
       </ul>
     </Box>
   );

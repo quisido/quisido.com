@@ -1,47 +1,36 @@
 import type { BreadcrumbGroupProps } from '@awsui/components-react/breadcrumb-group';
 import type { NonCancelableCustomEvent } from '@awsui/components-react/internal/events';
 import type { PaginationProps } from '@awsui/components-react/pagination';
-import type { TableProps } from '@awsui/components-react/table';
 import type { TranslateFunction } from 'lazy-i18n';
 import { useTranslate } from 'lazy-i18n';
 import { useCallback, useMemo } from 'react';
 import { useHistory, useLocation } from 'react-router';
-import { usePagination, useTable } from 'use-awsui';
+import { usePagination } from 'use-awsui';
 import PROJECT_ENTRIES from '../../constants/project-entries';
 import ProjectId from '../../constants/project-id';
 import ProjectType from '../../constants/project-type';
 import type Project from '../../types/project';
 import isProjectType from '../../utils/is-project-type';
-import useColumnDefinitions from './projects.hook.column-definitions';
 import type Item from './projects.type.item';
 import mapProjectEntryToItem from './projects.util.map-project-entry-to-item';
 
 interface State {
   readonly breadcrumbs: BreadcrumbGroupProps.Item[];
-  readonly columnDefinitions: TableProps.ColumnDefinition<Item>[];
   readonly currentPageIndex: number;
   readonly handleProjectTypeChange: (projectType?: ProjectType) => void;
   readonly items: Item[];
   readonly pagesCount: number;
   readonly projectType?: ProjectType;
-  readonly sortingColumn?: TableProps.SortingColumn<Item>;
-  readonly sortingDescending?: boolean;
-  readonly visibleColumns?: string[];
+  readonly visibleSections?: string[];
   readonly handlePaginationChange: (
     event: NonCancelableCustomEvent<PaginationProps.ChangeDetail>,
   ) => void;
-  readonly handleSortingChange: (
-    event: NonCancelableCustomEvent<TableProps.SortingState<Item>>,
-  ) => void;
 }
 
+const NO_VISIBLE_SECTIONS: string[] = [];
 const PAGE_SIZE = 10;
 
-const DEFAULT_SORTING_COLUMN: TableProps.SortingColumn<Item> = {
-  sortingField: 'id',
-};
-
-export default function useAbstract(): State {
+export default function useProjects(): State {
   // Contexts
   const history = useHistory();
   const location = useLocation();
@@ -71,11 +60,6 @@ export default function useAbstract(): State {
     pageSize: PAGE_SIZE,
   });
 
-  const { handleSortingChange, sort, sortingColumn, sortingDescending } =
-    useTable({
-      defaultSortingColumn: DEFAULT_SORTING_COLUMN,
-    });
-
   const filter = useCallback(
     ([, project]: [ProjectId, Project]): boolean => {
       if (typeof projectType === 'undefined') {
@@ -92,15 +76,12 @@ export default function useAbstract(): State {
   );
 
   return {
-    columnDefinitions: useColumnDefinitions(),
     currentPageIndex,
     handlePaginationChange,
-    handleSortingChange,
     pagesCount: Math.ceil(filteredItems.length / PAGE_SIZE) || 1,
     projectType,
-    sortingColumn,
-    sortingDescending,
-    visibleColumns: undefined,
+    visibleSections:
+      typeof projectType === 'undefined' ? undefined : NO_VISIBLE_SECTIONS,
 
     breadcrumbs: useMemo(
       (): BreadcrumbGroupProps.Item[] => [
@@ -131,8 +112,8 @@ export default function useAbstract(): State {
     ),
 
     items: useMemo(
-      (): Item[] => paginate(filteredItems.sort(sort)),
-      [filteredItems, paginate, sort],
+      (): Item[] => paginate(filteredItems),
+      [filteredItems, paginate],
     ),
   };
 }

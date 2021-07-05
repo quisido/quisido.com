@@ -5,7 +5,6 @@ import SpaceBetween from '@awsui/components-react/space-between';
 import I18n from 'lazy-i18n';
 import { ReactElement } from 'react';
 import AppLayout from '../../components/app-layout';
-import Footer from '../../components/footer';
 import Link from '../../components/link';
 import Quotes from '../../components/quotes';
 import Skills from '../../components/skills';
@@ -60,7 +59,6 @@ export default function Home(): ReactElement {
         </Container>
         <Skills />
         <Quotes />
-        <Footer />
       </SpaceBetween>
     </AppLayout>
   );

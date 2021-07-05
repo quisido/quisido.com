@@ -4,6 +4,7 @@ import type { ReactElement } from 'react';
 import AwsuiIconPagination from '../../shared/awsui-icon-pagination';
 import type CarouselItem from '../../types/carousel-item';
 import useCarousel from './carousel.hook';
+import styles from './carousel.module.scss';
 
 interface Props {
   readonly index: number;
@@ -34,6 +35,7 @@ export default function Carousel({
 
   return (
     <Container
+      className={styles.root}
       header={
         <Header
           description={description}
