@@ -4,10 +4,11 @@
 
 the professional portfolio of Ace Quisido
 
-## Development
+## Contributing
 
-To install the application's dependencies, use `yarn`.
-
-To run the application locally, use `yarn start`.
-
-To enable compatibility with VS Code, use `yarn pnpify --sdk vscode`.
+- `yarn set version latest` to upgrade Yarn to the latest version.
+- `yarn` to install dependencies.
+- `yarn up * @*/*` to upgrade to the latest dependencies.
+  - `yarn add --dev history@^4.10.1` to reset `history` to 4.x.x.
+- `yarn pnpify --sdk vscode` to enable VS Code support.
+- `yarn start` to run in development mode.

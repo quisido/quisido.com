@@ -1,16 +1,13 @@
-import Box from '@awsui/components-react/box';
-import Button from '@awsui/components-react/button';
 import FormField from '@awsui/components-react/form-field';
-import Header from '@awsui/components-react/header';
 import Pagination from '@awsui/components-react/pagination';
-import SpaceBetween from '@awsui/components-react/space-between';
 import Table from '@awsui/components-react/table';
-import I18n from 'lazy-i18n';
 import type { ReactElement } from 'react';
 import AppLayout from '../../components/app-layout';
+import ProjectBanner from '../../components/project-banner';
 import SelectProjectType from '../../components/select-project-type';
-import Link from '../link';
 import useProjects from './projects.hook';
+import Empty from './projects.view.empty';
+import Header from './projects.view.header';
 
 export default function Projects(): ReactElement {
   const {
@@ -30,8 +27,11 @@ export default function Projects(): ReactElement {
 
   return (
     <AppLayout breadcrumbs={breadcrumbs} contentType="table" toolsHide>
+      {projectType && <ProjectBanner>{projectType}</ProjectBanner>}
       <Table
         columnDefinitions={columnDefinitions}
+        empty={<Empty />}
+        header={<Header />}
         items={items}
         onSortingChange={handleSortingChange}
         resizableColumns={false}
@@ -41,18 +41,6 @@ export default function Projects(): ReactElement {
         trackBy="id"
         visibleColumns={visibleColumns}
         wrapLines={false}
-        empty={
-          <SpaceBetween direction="vertical" size="m">
-            <Box variant="p">
-              <I18n>No projects matched your filter.</I18n>
-            </Box>
-            <Link to="/projects">
-              <Button>
-                <I18n>Reset</I18n>
-              </Button>
-            </Link>
-          </SpaceBetween>
-        }
         filter={
           <>
             <FormField>
@@ -62,11 +50,6 @@ export default function Projects(): ReactElement {
               />
             </FormField>
           </>
-        }
-        header={
-          <Header>
-            <I18n>Projects</I18n>
-          </Header>
         }
         pagination={
           <Pagination
