@@ -8,7 +8,6 @@ the professional portfolio of Ace Quisido
 
 - `yarn set version latest` to upgrade Yarn to the latest version.
 - `yarn` to install dependencies.
-- `yarn up * @*/*` to upgrade to the latest dependencies.
-  - `yarn add --dev history@^4.10.1` to reset `history` to 4.x.x.
+- `yarn up * @*/* history@^4.10.1` to upgrade to the latest dependencies.
 - `yarn pnpify --sdk vscode` to enable VS Code support.
 - `yarn start` to run in development mode.

@@ -1,7 +1,9 @@
-import { AppLayoutProps } from '@awsui/components-react/app-layout';
-import { NonCancelableCustomEvent } from '@awsui/components-react/internal/events';
-import { TranslateFunction, useTranslate } from 'lazy-i18n';
-import { MutableRefObject, useLayoutEffect, useMemo, useRef } from 'react';
+import type { AppLayoutProps } from '@awsui/components-react/app-layout';
+import type { NonCancelableCustomEvent } from '@awsui/components-react/internal/events';
+import type { TranslateFunction } from 'lazy-i18n';
+import { useTranslate } from 'lazy-i18n';
+import type { MutableRefObject } from 'react';
+import { useLayoutEffect, useMemo, useRef } from 'react';
 import { useAppLayout as useAwsuiAppLayout } from 'use-awsui';
 
 interface Props {

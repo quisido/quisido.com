@@ -18,7 +18,7 @@ interface State {
   readonly breadcrumbs: BreadcrumbGroupProps.Item[];
   readonly currentPageIndex: number;
   readonly handleProjectTypeChange: (projectType?: ProjectType) => void;
-  readonly items: Item[];
+  readonly items: readonly Item[];
   readonly pagesCount: number;
   readonly projectType?: ProjectType;
   readonly visibleSections?: string[];
@@ -112,7 +112,7 @@ export default function useProjects(): State {
     ),
 
     items: useMemo(
-      (): Item[] => paginate(filteredItems),
+      (): readonly Item[] => paginate(filteredItems),
       [filteredItems, paginate],
     ),
   };
