@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.01af496b.chunk.css",
-    "main.js": "/static/js/main.acb59e4c.chunk.js",
-    "main.js.map": "/static/js/main.acb59e4c.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.9eadac22.js",
-    "runtime-main.js.map": "/static/js/runtime-main.9eadac22.js.map",
+    "main.css": "/static/css/main.9dd9e41a.chunk.css",
+    "main.js": "/static/js/main.e87be59d.chunk.js",
+    "main.js.map": "/static/js/main.e87be59d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.4c40e890.js",
+    "runtime-main.js.map": "/static/js/runtime-main.4c40e890.js.map",
     "static/css/2.874d8eb5.chunk.css": "/static/css/2.874d8eb5.chunk.css",
-    "static/js/2.b42c7ba1.chunk.js": "/static/js/2.b42c7ba1.chunk.js",
-    "static/js/2.b42c7ba1.chunk.js.map": "/static/js/2.b42c7ba1.chunk.js.map",
+    "static/js/2.89173ecc.chunk.js": "/static/js/2.89173ecc.chunk.js",
+    "static/js/2.89173ecc.chunk.js.map": "/static/js/2.89173ecc.chunk.js.map",
     "static/css/3.59abc19c.chunk.css": "/static/css/3.59abc19c.chunk.css",
-    "static/js/3.2200f7b8.chunk.js": "/static/js/3.2200f7b8.chunk.js",
-    "static/js/3.2200f7b8.chunk.js.map": "/static/js/3.2200f7b8.chunk.js.map",
+    "static/js/3.dba558a3.chunk.js": "/static/js/3.dba558a3.chunk.js",
+    "static/js/3.dba558a3.chunk.js.map": "/static/js/3.dba558a3.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.874d8eb5.chunk.css.map": "/static/css/2.874d8eb5.chunk.css.map",
     "static/css/3.59abc19c.chunk.css.map": "/static/css/3.59abc19c.chunk.css.map",
-    "static/css/main.01af496b.chunk.css.map": "/static/css/main.01af496b.chunk.css.map",
-    "static/js/2.b42c7ba1.chunk.js.LICENSE.txt": "/static/js/2.b42c7ba1.chunk.js.LICENSE.txt",
+    "static/css/main.9dd9e41a.chunk.css.map": "/static/css/main.9dd9e41a.chunk.css.map",
+    "static/js/2.89173ecc.chunk.js.LICENSE.txt": "/static/js/2.89173ecc.chunk.js.LICENSE.txt",
     "static/media/1--240.c1b145f9.jpg": "/static/media/1--240.c1b145f9.jpg",
     "static/media/1--240.f72ec447.jpg": "/static/media/1--240.f72ec447.jpg",
     "static/media/1.2add3479.jpg": "/static/media/1.2add3479.jpg",
@@ -98,10 +98,10 @@
     "static/media/stone-knight.fd11d2be.jpg": "/static/media/stone-knight.fd11d2be.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.9eadac22.js",
+    "static/js/runtime-main.4c40e890.js",
     "static/css/2.874d8eb5.chunk.css",
-    "static/js/2.b42c7ba1.chunk.js",
-    "static/css/main.01af496b.chunk.css",
-    "static/js/main.acb59e4c.chunk.js"
+    "static/js/2.89173ecc.chunk.js",
+    "static/css/main.9dd9e41a.chunk.css",
+    "static/js/main.e87be59d.chunk.js"
   ]
 }
