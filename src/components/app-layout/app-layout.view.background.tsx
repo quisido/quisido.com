@@ -6,21 +6,20 @@ import getRandomNumber from '../../utils/get-random-number';
 import Star from './app-layout.type.star';
 import mapStarsToBackgroundImage from './app-layout.util.map-stars-to-background-image';
 import mapRefToMain from './app-layout.util.map-ref-to-main';
-import styles from './app-layout.view.background.module.scss';
 
 interface Props {
   readonly children: MutableRefObject<HTMLDivElement | null>;
 }
 
-const COUNT = 50;
+const COUNT = 67;
 const DEPTH_MAX = 5;
 const DEPTH_MIN = 1;
 const HUE = 327;
-const HUE_OFFSET = 60;
+const HUE_OFFSET = 45;
 const LIGHTNESS_MAX = 0.667;
 const LIGHTNESS_MIN = 0.333;
 const OFFSET_X_MAX = 50;
-const OFFSET_X_MIN = 15;
+const OFFSET_X_MIN = 5;
 const OFFSET_Y_MAX = 50;
 const OFFSET_Y_MIN = 0;
 const OPACITY_MAX = 1;
@@ -29,8 +28,10 @@ const SATURATION_MAX = 1;
 const SATURATION_MIN = 0;
 const SIZE_MAX = 1;
 const SIZE_MIN = 0.25;
-const SPEED_MULTIPLIER = 0.15;
+const SPEED_MULTIPLIER = 0.333;
 const STARS: Star[] = [];
+const TRANSITION_DURATION_MS = 1000;
+const TRANSITION_TIMING_FUNCTION = 'ease-out';
 
 const DEPTH_RANGE: number = DEPTH_MAX - DEPTH_MIN;
 const OPACITY_RANGE: number = OPACITY_MAX - OPACITY_MIN;
@@ -85,15 +86,74 @@ export default function AppLayoutBackground({ children: ref }: Props): null {
       return;
     }
 
-    main.classList.add(styles.main);
+    const oldBackgroundAttachment: string = main.style.getPropertyValue(
+      'background-attachment',
+    );
+
+    const oldBackgroundImage: string =
+      main.style.getPropertyValue('background-image');
+
+    const oldBackgroundPosition: string = main.style.getPropertyValue(
+      'background-position',
+    );
+
+    const oldBackgroundRepeat: string =
+      main.style.getPropertyValue('background-repeat');
+
+    const oldBackgroundSize: string =
+      main.style.getPropertyValue('background-size');
+
+    const oldTransitionDelay: string =
+      main.style.getPropertyValue('transition-delay');
+
+    const oldTransitionDuration: string = main.style.getPropertyValue(
+      'transition-duration',
+    );
+
+    const oldTransitionProperty: string = main.style.getPropertyValue(
+      'transition-property',
+    );
+
+    const oldTransitionTimingFunction: string = main.style.getPropertyValue(
+      'transition-timing-function',
+    );
+
+    main.style.setProperty('background-attachment', 'fixed');
+    main.style.setProperty('background-position', '0 0');
+    main.style.setProperty('background-repeat', 'no-repeat');
+    main.style.setProperty('background-size', '100vh 100vh');
+    main.style.setProperty('transition-delay', '0s');
+    main.style.setProperty('transition-property', 'background-position');
+
     main.style.setProperty(
       'background-image',
       mapStarsToBackgroundImage(STARS),
     );
 
+    main.style.setProperty(
+      'transition-duration',
+      `${TRANSITION_DURATION_MS}ms`,
+    );
+
+    main.style.setProperty(
+      'transition-timing-function',
+      TRANSITION_TIMING_FUNCTION,
+    );
+
     return (): void => {
-      main.classList.remove(styles.main);
-      main.style.setProperty('background-image', 'none');
+      main.style.setProperty('background-attachment', oldBackgroundAttachment);
+      main.style.setProperty('background-image', oldBackgroundImage);
+      main.style.setProperty('background-position', oldBackgroundPosition);
+      main.style.setProperty('background-repeat', oldBackgroundRepeat);
+      main.style.setProperty('background-size', oldBackgroundSize);
+      main.style.setProperty('transition-delay', oldTransitionDelay);
+      main.style.setProperty('transition-duration', oldTransitionDuration);
+      main.style.setProperty('transition-property', oldTransitionProperty);
+
+      main.style.setProperty(
+        'transition-timing-function',
+        oldTransitionTimingFunction,
+      );
     };
   }, [main]);
 
