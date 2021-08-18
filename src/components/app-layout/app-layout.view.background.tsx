@@ -1,14 +1,15 @@
 import hsl2rgb from '@charlesstover/hsl2rgb';
-import type { MutableRefObject } from 'react';
-import { useEffect, useMemo } from 'react';
+import { useEffect } from 'react';
 import useMouseMove, { MouseMoveVariant } from 'use-mouse-move';
+import useParamsMemo from 'use-params-memo';
 import getRandomNumber from '../../utils/get-random-number';
 import Star from './app-layout.type.star';
 import mapStarsToBackgroundImage from './app-layout.util.map-stars-to-background-image';
+import { useCallback } from 'react';
 import mapRefToMain from './app-layout.util.map-ref-to-main';
 
 interface Props {
-  readonly children: MutableRefObject<HTMLDivElement | null>;
+  readonly children: HTMLDivElement;
 }
 
 const COUNT = 67;
@@ -69,111 +70,112 @@ for (let i = 0; i < COUNT; i++) {
   });
 }
 
-export default function AppLayoutBackground({ children: ref }: Props): null {
-  const refCurrent: HTMLDivElement | null = ref.current;
-
+export default function AppLayoutBackground({ children }: Props): null {
   // States
   const [mouseX, mouseY] = useMouseMove(MouseMoveVariant.Page);
+  const main: HTMLElement = useParamsMemo(mapRefToMain, [children]);
 
-  const main: HTMLElement | null = useMemo(
-    (): HTMLElement | null => mapRefToMain(refCurrent),
-    [refCurrent],
+  // The center of the screen is 50vw. The image has a 100vh width, so we
+  //   subtract 50vh to center the background image.
+  // From 0 to 100% of the window width, we adjust this position from -50vw to
+  //   +50vw.
+  // We add a non-symmetric offset.
+  // We divide this range by the depth.
+  const mapStarToBackgroundPositionX = useCallback(
+    ({ depth, offsetX }: Star): string =>
+      `calc(50vw - 50vh + (50vw - ${
+        (mouseX / window.innerWidth) * 100
+      }vw + ${offsetX}vw) / ${depth / SPEED_MULTIPLIER})`,
+    [mouseX],
+  );
+
+  // The center of the screen is 50vh. The image has a 100vh height, so we
+  //   subtract 50vh to center the background image, totaling 0.
+  // From 0 to 100% of the window height, we adjust this position from -50vh to
+  //   +50vh.
+  // We add a non-symmetric offset.
+  // We divide this range by the depth.
+  const mapStarToBackgroundPositionY = useCallback(
+    ({ depth, offsetY }: Star): string =>
+      `calc(0vh + (50vh - ${
+        (mouseY / window.innerHeight) * 100
+      }vh + ${offsetY}vh) / ${depth / SPEED_MULTIPLIER})`,
+    [mouseY],
   );
 
   // Effects
-  useEffect((): void | VoidFunction => {
-    if (main === null) {
-      return;
-    }
-
-    const oldBackgroundAttachment: string = main.style.getPropertyValue(
+  useEffect((): VoidFunction => {
+    const oldAttachment: string = main.style.getPropertyValue(
       'background-attachment',
     );
-
-    const oldBackgroundImage: string =
-      main.style.getPropertyValue('background-image');
-
-    const oldBackgroundPosition: string = main.style.getPropertyValue(
+    const oldImage: string = main.style.getPropertyValue('background-image');
+    const oldPosition: string = main.style.getPropertyValue(
       'background-position',
     );
-
-    const oldBackgroundRepeat: string =
-      main.style.getPropertyValue('background-repeat');
-
-    const oldBackgroundSize: string =
-      main.style.getPropertyValue('background-size');
-
-    const oldTransitionDelay: string =
-      main.style.getPropertyValue('transition-delay');
-
-    const oldTransitionDuration: string = main.style.getPropertyValue(
-      'transition-duration',
-    );
-
-    const oldTransitionProperty: string = main.style.getPropertyValue(
-      'transition-property',
-    );
-
-    const oldTransitionTimingFunction: string = main.style.getPropertyValue(
-      'transition-timing-function',
-    );
+    const oldRepeat: string = main.style.getPropertyValue('background-repeat');
+    const oldSize: string = main.style.getPropertyValue('background-size');
 
     main.style.setProperty('background-attachment', 'fixed');
-    main.style.setProperty('background-position', '0 0');
+    main.style.setProperty('background-position-x', '0');
+    main.style.setProperty('background-position-y', '0');
     main.style.setProperty('background-repeat', 'no-repeat');
     main.style.setProperty('background-size', '100vh 100vh');
-    main.style.setProperty('transition-delay', '0s');
-    main.style.setProperty('transition-property', 'background-position');
-
     main.style.setProperty(
       'background-image',
       mapStarsToBackgroundImage(STARS),
     );
 
-    main.style.setProperty(
+    return (): void => {
+      main.style.setProperty('background-attachment', oldAttachment);
+      main.style.setProperty('background-image', oldImage);
+      main.style.setProperty('background-position', oldPosition);
+      main.style.setProperty('background-repeat', oldRepeat);
+      main.style.setProperty('background-size', oldSize);
+    };
+  }, [main]);
+
+  // Delay transition properties so that the initial positions are immediate.
+  useEffect((): VoidFunction => {
+    const oldDelay: string = main.style.getPropertyValue('transition-delay');
+    const oldDuration: string = main.style.getPropertyValue(
       'transition-duration',
-      `${TRANSITION_DURATION_MS}ms`,
+    );
+    const oldProperty: string = main.style.getPropertyValue(
+      'transition-property',
+    );
+    const oldTimingFunction: string = main.style.getPropertyValue(
+      'transition-timing-function',
     );
 
-    main.style.setProperty(
-      'transition-timing-function',
-      TRANSITION_TIMING_FUNCTION,
-    );
+    let request: number = requestAnimationFrame((): void => {
+      request = requestAnimationFrame((): void => {
+        main.style.setProperty('transition-delay', '0s');
+        main.style.setProperty(
+          'transition-property',
+          'background-position-x, background-position-y',
+        );
+        main.style.setProperty(
+          'transition-duration',
+          `${TRANSITION_DURATION_MS}ms`,
+        );
+        main.style.setProperty(
+          'transition-timing-function',
+          TRANSITION_TIMING_FUNCTION,
+        );
+      });
+    });
 
     return (): void => {
-      main.style.setProperty('background-attachment', oldBackgroundAttachment);
-      main.style.setProperty('background-image', oldBackgroundImage);
-      main.style.setProperty('background-position', oldBackgroundPosition);
-      main.style.setProperty('background-repeat', oldBackgroundRepeat);
-      main.style.setProperty('background-size', oldBackgroundSize);
-      main.style.setProperty('transition-delay', oldTransitionDelay);
-      main.style.setProperty('transition-duration', oldTransitionDuration);
-      main.style.setProperty('transition-property', oldTransitionProperty);
-
-      main.style.setProperty(
-        'transition-timing-function',
-        oldTransitionTimingFunction,
-      );
+      window.clearTimeout(request);
+      main.style.setProperty('transition-delay', oldDelay);
+      main.style.setProperty('transition-duration', oldDuration);
+      main.style.setProperty('transition-property', oldProperty);
+      main.style.setProperty('transition-timing-function', oldTimingFunction);
     };
   }, [main]);
 
   useEffect((): void | VoidFunction => {
-    if (main === null) {
-      return;
-    }
-
     const request: number = requestAnimationFrame((): void => {
-      // The center of the screen is 50vw. The image has a 100vh width, so we
-      //   subtract 50vh to center the background image.
-      // From 0 to 100% of the window width, we adjust this position from -50vw
-      //   to +50vw.
-      // We add a non-symmetric offset.
-      // We divide this range by the depth.
-      const mapStarToBackgroundPositionX = ({ depth, offsetX }: Star): string =>
-        `calc(50vw - 50vh + (50vw - ${
-          (mouseX / window.innerWidth) * 100
-        }vw + ${offsetX}vw) / ${depth / SPEED_MULTIPLIER})`;
-
       main.style.setProperty(
         'background-position-x',
         STARS.map(mapStarToBackgroundPositionX).join(', '),
@@ -183,29 +185,10 @@ export default function AppLayoutBackground({ children: ref }: Props): null {
     return (): void => {
       cancelAnimationFrame(request);
     };
-  }, [main, mouseX]);
+  }, [main, mapStarToBackgroundPositionX]);
 
   useEffect((): void | VoidFunction => {
-    if (main === null) {
-      return;
-    }
-
     const request: number = requestAnimationFrame((): void => {
-      // The center of the screen is 50vh. The image has a 100vh height, so we
-      //   subtract 50vh to center the background image, totaling 0.
-      // From 0 to 100% of the window height, we adjust this position from -50vh
-      //   to +50vh.
-      // We add a non-symmetric offset.
-      // We divide this range by the depth.
-      const mapStarToBackgroundPositionY = ({
-        depth,
-        offsetY,
-      }: Star): string => {
-        return `calc(0vh + (50vh - ${
-          (mouseY / window.innerHeight) * 100
-        }vh + ${offsetY}vh) / ${depth / SPEED_MULTIPLIER})`;
-      };
-
       main.style.setProperty(
         'background-position-y',
         STARS.map(mapStarToBackgroundPositionY).join(', '),
@@ -215,7 +198,7 @@ export default function AppLayoutBackground({ children: ref }: Props): null {
     return (): void => {
       cancelAnimationFrame(request);
     };
-  }, [main, mouseY]);
+  }, [main, mapStarToBackgroundPositionY]);
 
   return null;
 }

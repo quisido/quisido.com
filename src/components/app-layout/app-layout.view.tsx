@@ -7,6 +7,7 @@ import Breadcrumbs from '../../components/breadcrumbs';
 import Footer from '../../components/footer';
 import Navigation from '../../components/navigation';
 import Notifications from '../../components/notifications';
+import withElementRef from '../../hocs/with-element-ref';
 import useAppLayout from './app-layout.hook';
 import Background from './app-layout.view.background';
 
@@ -22,6 +23,8 @@ interface Props {
   toolsHide?: boolean;
   toolsOpen?: boolean;
 }
+
+const RefBackground = withElementRef(Background, 'children');
 
 export default function CustomAppLayout({
   Tools,
@@ -49,7 +52,7 @@ export default function CustomAppLayout({
 
   return (
     <div ref={ref}>
-      <Background>{ref}</Background>
+      <RefBackground>{ref}</RefBackground>
       <AppLayout
         ariaLabels={ariaLabels}
         contentType={contentType}

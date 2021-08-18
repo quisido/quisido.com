@@ -75,6 +75,7 @@
     "use-awsui": "^1.0.6",
     "use-awsui-router": "^1.2.1",
     "use-mouse-move": "^1.0.1",
+    "use-params-memo": "^1.0.0",
     "web-vitals": "^2.1.0"
   }
 }

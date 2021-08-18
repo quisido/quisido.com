@@ -14521,6 +14521,7 @@ fsevents@^1.2.7:
     use-awsui: ^1.0.6
     use-awsui-router: ^1.2.1
     use-mouse-move: ^1.0.1
+    use-params-memo: ^1.0.0
     web-vitals: ^2.1.0
   languageName: unknown
   linkType: soft
@@ -17431,6 +17432,15 @@ typescript@^4.3.5:
     react: ^16.8.0
     react-dom: ^16.8.0
   checksum: 262cbf24c49a1cb804a50d43a0d2bd99c42a66e355081750ec1dc89bed09053f7bee56614eea0474417b791d4263f591847ef7787aa7e47d208822ea042d880b
+  languageName: node
+  linkType: hard
+
+"use-params-memo@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "use-params-memo@npm:1.0.0"
+  peerDependencies:
+    react: ^17.0.0
+  checksum: 90542cbff2759c471c9ef1d0adb58ac0ff232e1df594c095ae1b410096cb4852d4731a8177592f62ed4bfe940034c0b24aad63d48b17ae1d95cd4d902ab9e265
   languageName: node
   linkType: hard
 

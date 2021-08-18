@@ -86,6 +86,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["use-awsui", "virtual:fc5e721cf99fc89444d42ccac906d6375643154ede53e0f46baf27a863391b783755e05e8a990d769248195e0d53c2d25783ff84155f65c4ffdd1ebbc7d82aea#npm:1.0.6"],
             ["use-awsui-router", "virtual:fc5e721cf99fc89444d42ccac906d6375643154ede53e0f46baf27a863391b783755e05e8a990d769248195e0d53c2d25783ff84155f65c4ffdd1ebbc7d82aea#npm:1.2.1"],
             ["use-mouse-move", "virtual:fc5e721cf99fc89444d42ccac906d6375643154ede53e0f46baf27a863391b783755e05e8a990d769248195e0d53c2d25783ff84155f65c4ffdd1ebbc7d82aea#npm:1.0.1"],
+            ["use-params-memo", "virtual:fc5e721cf99fc89444d42ccac906d6375643154ede53e0f46baf27a863391b783755e05e8a990d769248195e0d53c2d25783ff84155f65c4ffdd1ebbc7d82aea#npm:1.0.0"],
             ["web-vitals", "npm:2.1.0"]
           ],
           "linkType": "SOFT",
@@ -20433,6 +20434,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["use-awsui", "virtual:fc5e721cf99fc89444d42ccac906d6375643154ede53e0f46baf27a863391b783755e05e8a990d769248195e0d53c2d25783ff84155f65c4ffdd1ebbc7d82aea#npm:1.0.6"],
             ["use-awsui-router", "virtual:fc5e721cf99fc89444d42ccac906d6375643154ede53e0f46baf27a863391b783755e05e8a990d769248195e0d53c2d25783ff84155f65c4ffdd1ebbc7d82aea#npm:1.2.1"],
             ["use-mouse-move", "virtual:fc5e721cf99fc89444d42ccac906d6375643154ede53e0f46baf27a863391b783755e05e8a990d769248195e0d53c2d25783ff84155f65c4ffdd1ebbc7d82aea#npm:1.0.1"],
+            ["use-params-memo", "virtual:fc5e721cf99fc89444d42ccac906d6375643154ede53e0f46baf27a863391b783755e05e8a990d769248195e0d53c2d25783ff84155f65c4ffdd1ebbc7d82aea#npm:1.0.0"],
             ["web-vitals", "npm:2.1.0"]
           ],
           "linkType": "SOFT",
@@ -23952,6 +23954,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "@types/react-dom",
             "@types/react",
             "react-dom",
+            "react"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["use-params-memo", [
+        ["npm:1.0.0", {
+          "packageLocation": "./.yarn/cache/use-params-memo-npm-1.0.0-b8c9cdc270-90542cbff2.zip/node_modules/use-params-memo/",
+          "packageDependencies": [
+            ["use-params-memo", "npm:1.0.0"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:fc5e721cf99fc89444d42ccac906d6375643154ede53e0f46baf27a863391b783755e05e8a990d769248195e0d53c2d25783ff84155f65c4ffdd1ebbc7d82aea#npm:1.0.0", {
+          "packageLocation": "./.yarn/$$virtual/use-params-memo-virtual-7e96176ac4/0/cache/use-params-memo-npm-1.0.0-b8c9cdc270-90542cbff2.zip/node_modules/use-params-memo/",
+          "packageDependencies": [
+            ["use-params-memo", "virtual:fc5e721cf99fc89444d42ccac906d6375643154ede53e0f46baf27a863391b783755e05e8a990d769248195e0d53c2d25783ff84155f65c4ffdd1ebbc7d82aea#npm:1.0.0"],
+            ["@types/react", "npm:17.0.18"],
+            ["react", "npm:17.0.2"]
+          ],
+          "packagePeers": [
+            "@types/react",
             "react"
           ],
           "linkType": "HARD",
