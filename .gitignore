@@ -11,6 +11,7 @@
 /node_modules/
 /types/
 /*.iml
+/.env
 /.pnp.cjs
 /.tsbuildinfo
 /npm-debug.log
