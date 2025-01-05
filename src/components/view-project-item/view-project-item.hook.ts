@@ -80,7 +80,7 @@ export default function useViewProjectItem({
     handleIndexChange: useCallback(
       (newIndex: number): void => {
         const { id: newItemId }: ProjectItem = project.items[newIndex];
-        history.push(`/projects/${projectId}/${newItemId}`);
+        history.replace(`/projects/${projectId}/${newItemId}`);
       },
       [history, project.items, projectId],
     ),

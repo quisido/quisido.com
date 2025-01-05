@@ -20,10 +20,7 @@
   "scripts": {
     "build": "react-scripts build",
     "eslint": "eslint src",
-    "jest": "jest",
-    "start": "react-scripts start",
-    "test": "eslint src && jest",
-    "test-watch": "jest --watch"
+    "start": "react-scripts --openssl-legacy-provider start"
   },
   "devDependencies": {
     "@awsui/components-react": "^3.0.222",
@@ -37,11 +34,7 @@
     "@charlesstover/hsl2rgb": "^1.0.4",
     "@sentry/react": "^6.11.0",
     "@sentry/tracing": "^6.11.0",
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^12.0.0",
-    "@testing-library/react-hooks": "^7.0.1",
     "@types/history": "^4.7.9",
-    "@types/jest": "^27.0.1",
     "@types/node": "^16.6.1",
     "@types/react": "^17.0.18",
     "@types/react-dom": "^17.0.9",
@@ -51,7 +44,6 @@
     "@typescript-eslint/parser": "^4.29.1",
     "@yarnpkg/pnpify": "^3.0.1",
     "awsui-theme": "^1.0.5",
-    "babel-jest": "^27.0.6",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
@@ -59,7 +51,6 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "history": "4.10.1",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^27.0.6",
     "lazy-i18n": "^2.0.9",
     "prettier": "^2.3.2",
     "react": "^17.0.2",
@@ -69,7 +60,6 @@
     "react-scripts": "^4.0.3",
     "react-test-renderer": "^17.0.2",
     "sass": "^1.37.5",
-    "ts-jest": "^27.0.4",
     "tslib": "^2.3.1",
     "typescript": "^4.3.5",
     "use-awsui": "^1.0.6",
