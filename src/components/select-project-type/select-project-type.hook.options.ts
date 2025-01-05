@@ -22,8 +22,8 @@ export default function useSelectProjectTypeOptions(): SelectProps.Option[] {
           return translate('Fabrication');
         case ProjectType.Miniatures:
           return translate('Miniatures');
-        // case ProjectType.Sculptures:
-        //   return translate('Sculptures');
+        case ProjectType.Sculptures:
+          return translate('Sculptures');
         default:
           // Switch should be exhaustive.
           // eslint-disable-next-line @typescript-eslint/restrict-template-expressions

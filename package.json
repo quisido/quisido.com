@@ -1,18 +1,18 @@
 {
   "name": "quisido.com",
   "version": "0.1.0",
-  "author": "Charles Stover <charlesstover@quisido.com>",
-  "description": "the professional portfolio of Ace Quisido",
+  "author": "Charles Quisido <charles@quisido.com>",
+  "description": "the professional portfolio of Jaq Quisido",
   "homepage": "https://quisido.com/",
   "private": true,
-  "repository": "github:CharlesStover/quisido.com",
+  "repository": "github:quisido/quisido.com",
   "bugs": {
-    "email": "charlesstover@quisido.com.com",
-    "url": "https://github.com/CharlesStover/quisido.com/issues"
+    "email": "charles@quisido.com",
+    "url": "https://github.com/quisido/quisido.com/issues"
   },
   "funding": {
     "type": "individual",
-    "url": "https://github.com/sponsors/CharlesStover"
+    "url": "https://github.com/sponsors/quisido"
   },
   "publishConfig": {
     "access": "restricted"

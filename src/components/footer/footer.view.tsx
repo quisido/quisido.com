@@ -10,7 +10,7 @@ export default function Footer(): ReactElement {
       <ul className={styles.list}>
         <li>Filipinx</li>
         <li>
-          <Link to="mailto:ace@quisido.com">
+          <Link to="mailto:jaq@quisido.com">
             <I18n>Email me</I18n>
           </Link>
         </li>

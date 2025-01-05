@@ -22,6 +22,8 @@ export default function useMapItemIdToTitle(): (
           return translate('Chiaroscuro');
         case ItemId.Collage:
           return translate('Collage');
+        case ItemId.Construction:
+          return translate('Construction');
         case ItemId.DemonicFoliage:
           return translate('Demonic Foliage');
         case ItemId.Elevation:

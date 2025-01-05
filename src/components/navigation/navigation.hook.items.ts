@@ -53,17 +53,17 @@ export default function useItems(): SideNavigationProps.Item[] {
         text: translate('Miniatures') || '...',
         type: 'link',
       },
-      // {
-      //   href: '/sculptures',
-      //   text: translate('Sculptures') || '...',
-      //   type: 'link',
-      // },
+      {
+        href: '/projects?type=sculptures',
+        text: translate('Sculptures') || '...',
+        type: 'link',
+      },
       {
         type: 'divider',
       },
       {
         external: true,
-        href: 'mailto:ace@quisido.com',
+        href: 'mailto:jaq@quisido.com',
         text: translate('Email') || '...',
         type: 'link',
       },
@@ -71,12 +71,6 @@ export default function useItems(): SideNavigationProps.Item[] {
         external: true,
         href: 'https://www.linkedin.com/in/acequisido/',
         text: 'LinkedIn',
-        type: 'link',
-      },
-      {
-        external: true,
-        href: 'https://twitter.com/AceQuisido',
-        text: 'Twitter',
         type: 'link',
       },
     ],

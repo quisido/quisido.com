@@ -42,6 +42,8 @@ export default function useProjectBanner(projectType: ProjectType): State {
           return translate('Fabrication') || '...';
         case ProjectType.Miniatures:
           return translate('Miniatures') || '...';
+        case ProjectType.Sculptures:
+          return translate('Sculptures') || '...';
       }
     }, [projectType, translate]),
   };

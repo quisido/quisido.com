@@ -3,6 +3,7 @@ import abstract from '../../images/banners/abstract.jpg';
 import dryMedia from '../../images/banners/dry-media.jpg';
 import fabrication from '../../images/banners/fabrication.jpg';
 import miniatures from '../../images/banners/miniatures.jpg';
+import sculptures from '../../images/banners/sculptures.jpg';
 
 export default function mapProjectTypeToSrc(type: ProjectType): string {
   switch (type) {
@@ -14,5 +15,7 @@ export default function mapProjectTypeToSrc(type: ProjectType): string {
       return fabrication;
     case ProjectType.Miniatures:
       return miniatures;
+    case ProjectType.Sculptures:
+      return sculptures;
   }
 }

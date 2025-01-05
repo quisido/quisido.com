@@ -3,7 +3,7 @@ enum ProjectType {
   DryMedia = 'dry-media',
   Fabrication = 'fabrication',
   Miniatures = 'miniatures',
-  // Sculptures = 'sculptures',
+  Sculptures = 'sculptures',
 }
 
 export default ProjectType;

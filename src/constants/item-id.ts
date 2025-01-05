@@ -3,6 +3,7 @@ enum ItemId {
   Blueprint = 'blueprint',
   BrittanyWelsh = 'brittany-welsh',
   Collage = 'collage',
+  Construction = 'construction',
   Chiaroscuro = 'chiaroscuro',
   DemonicFoliage = 'demonic-foliage',
   Elevation = 'elevation',

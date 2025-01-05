@@ -1,5 +1,6 @@
 enum ProjectId {
   ConferenceTable = 'conference-table',
+  JabbaTheSlut = 'jabba-the-slut',
   DarkSoulsDarkroot = 'dark-souls-darkroot',
   LakeCollage = 'lake-collage',
   MiscellaneousDryMedia = 'miscellaneous-dry-media',

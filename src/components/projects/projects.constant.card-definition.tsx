@@ -32,6 +32,8 @@ const CARD_DEFINITION: CardsProps.CardDefinition<Item> = {
             return <I18n>Fabrication</I18n>;
           case ProjectType.Miniatures:
             return <I18n>Miniatures</I18n>;
+          case ProjectType.Sculptures:
+            return <I18n>Sculptures</I18n>;
         }
       },
     },
