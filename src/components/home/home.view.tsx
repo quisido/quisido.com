@@ -54,7 +54,6 @@ export default function Home(): ReactElement {
           </SpaceBetween>
         </Container>
         <Skills />
-        {/* <Quotes /> */}
       </SpaceBetween>
     </AppLayout>
   );
