@@ -1,6 +1,6 @@
 # [Quisido.com](https://quisido.com/)
 
-the professional portfolio of Jaq Quisido
+the professional portfolio of Justin Morgan
 
 ## Contributing
 
